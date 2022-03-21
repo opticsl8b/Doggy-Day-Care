@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center">    
+        <div class="signup-card">
+            <h2 class="page-title login-margin">Book a Service</h2>
+            <form class="form login-form d-flex flex-column justify-content-center align-items-center">
+                <div class="form-group">                    
+                        <label for="booking-day">Day</label>
+                        <select name="booking-day" id="booking-day">
+                          <option value="monday">Monday</option>
+                          <option value="tuesday">Tuesday</option>
+                          <option value="wednesday">Wednesday</option>
+                          <option value="thursday">Thursday</option>
+                          <option value="friday">Friday</option>
+                        </select>                      
+                </div>
+                <div class="form-group">
+                    <label for="booking-session">Session</label>
+                    <select name="booking-session" id="booking-session">
+                      <option value="Small">Morning</option>
+                      <option value="Medium">Afternoon</option>
+                      <option value="Large">All Day</option>
+                    </select>
+                  </div>
+                <div class="form-group">
+                  <label for="booking-dog">Dog</label>
+                  <select name="booking-dog" id="booking-dog">
+                    <option value="user-dog-1">{{Dog 1}}</option>
+                    <option value="user-dog-2">{{Dog 2}}</option>
+                    <option value="user-dog-3">{{Dog 3}}</option> 
+                </select>             
+                </div>
+                <div class="form-group">
+                    <label for="booking-service">Service</label>
+                    <select name="booking-service" id="booking-service">
+                      <option value="daycare">Daycare</option>
+                      <option value="training">Obedience Training</option>
+                      <option value="clean">Grooming & Clean</option>
+                      <option value="holiday">Holiday Care</option>
+                    </select>  
+                </div>                                    
+                <button class="homeButton" type="submit">Book</button>            
+            </form>
+        </div>
+</div>  

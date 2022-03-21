@@ -82,6 +82,10 @@ label {
     text-align: center;
 }
 
+textarea {
+    height: 200px;
+}
+
 .loginButton {
     color: whitesmoke;
     margin-left: auto;

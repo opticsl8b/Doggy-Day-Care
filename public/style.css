@@ -7,6 +7,16 @@ h2{
     margin-bottom: 10%;
 }
 
+h3{
+    margin-top: -5%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+a{
+    text-align: center;    
+}
+
 .navbar-text {
     margin-left: auto;
     margin-right: auto;
@@ -22,6 +32,7 @@ body {
     bottom: 0px;
     height: 45%;
     width: 20%;
+    z-index:-1;
 }
 
 .pic-right {
@@ -67,6 +78,10 @@ body {
     width: 100%;
 }
 
+label {
+    text-align: center;
+}
+
 .loginButton {
     color: whitesmoke;
     margin-left: auto;
@@ -76,6 +91,25 @@ body {
     margin-bottom: 0.5%;
     padding: 5%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.homeButton {
+    color: whitesmoke;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(1, 1, 5);
+    border-radius: 1%;
+    margin-bottom: 0.5%;
+    padding: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    margin-bottom: 5%;
+}
+
+.btn-primary {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (max-width: 1400px) {

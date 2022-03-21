@@ -10,42 +10,73 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
-
-    <header>
-        <nav class="navbar navbar-light bg-dark">
+<header>
+    <nav class="navbar navbar-light bg-dark">
+        <div class = "container-xl d-flex flex-column">
             <span class="navbar-text">
                 <h1>Doggy Day Care</h1>
             </span>
-          </nav>
-    </header>
+            <div class="row d-flex justify-content-center">
+                <a class="navbarButton btnSpace" href="/">Home</a>
+                <a class="navbarButton btnSpace" href="/manage">Manage My Dogs</a>
+                <a class="navbarButton btnSpace" href="/book">Book A Service</a>                
+                <a class="navbarButton btnSpace" href="/contact">Email Us</a>
+                <a class="navbarButton btnSpace" href="/calender">This Week</a>
+                {{#if loggedIn}}
+                <a class="navbarButton btnSpace" id="logout" href="">Logout</a>
+                {{else}}
+                <a class="navbarButton btnSpace" href="/login">Login</a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    {{{body}}}
+
+    <div class="d-flex justify-content-center">    
+        <div class="signup-card">
+          <h2 class="page-title login-margin">Sign Up</h2>
+          <form class="form login-form d-flex flex-column justify-content-center align-items-left">
+            <div class="form-group">
+              <label for="email-login">Email</label>
+              <input class="form-input" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+              <label for="email-login">First Name</label>
+              <input class="form-input" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+              <label for="email-login">Last Name</label>
+              <input class="form-input" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+              <label for="email-login">Phone Number</label>
+              <input class="form-input" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+              <label for="email-login">Address</label>
+              <input class="form-input" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+              <label for="password-login">Password</label>
+              <input class="form-input" type="password" id="password-login" />
+            </div>
+            <div class="form-group d-flex">
+              <button class="loginButton" type="submit">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+</main>
 
 
- 
+<body>
 
-
-
-
-
-    <img class="dog-pic pic-right"src="../assets/cute-dog.jpg" alt="cute-dog-drawing"/>
-    <img class="dog-pic pic-left"src="../assets/cute-dog-2.png" alt="cute-dog-drawing2"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img class="dog-pic pic-right"src="../assets/cute-dog.jpg" alt="cute-dog-drawing"/>
+<img class="dog-pic pic-left"src="../assets/cute-dog-2.png" alt="cute-dog-drawing2"/>
 
 </body>  
 

@@ -4,33 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <title>Dogward Daycare</title>
+    <!--Bootstrap script-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    <!-- TODO: Add a comment describing the functionality of this helper -->
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
+<header>
+    <nav class="navbar navbar-light bg-dark">
+        <div class = "container-xl d-flex flex-column">
+            <span class="navbar-text">
+                <h1>Doggy Day Care</h1>
+            </span>
+            <div class="row d-flex justify-content-center">
+                <a class="navbarButton btnSpace" href="/">Home</a>
+                <a class="navbarButton btnSpace" href="/manage">Manage My Dogs</a>
+                <a class="navbarButton btnSpace" href="/book">Book A Service</a>                
+                <a class="navbarButton btnSpace" href="/contact">Email Us</a>
+                <a class="navbarButton btnSpace" href="/calender">This Week</a>
+                {{#if loggedIn}}
+                <a class="navbarButton btnSpace" id="logout" href="">Logout</a>
+                {{else}}
+                <a class="navbarButton btnSpace" href="/login">Login</a>
+                {{/if}}
+            </div>
+        </div>
     </nav>
-    {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+</header>
 
-  <!-- TODO: Add a comment describing the functionality of this helper -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+<main>
+    {{{body}}}
+</main>
+
+
+<body>
+
+<img class="dog-pic pic-right"src="../assets/cute-dog.jpg" alt="cute-dog-drawing"/>
+<img class="dog-pic pic-left"src="../assets/cute-dog-2.png" alt="cute-dog-drawing2"/>
+
+</body>  
+
+<!--JQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--Moment-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!--Javascript-->
+<!--TODO: Add login scripts here-->
 
 </html>

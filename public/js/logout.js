@@ -21,7 +21,7 @@ async function handleLogout() {
           }
         });
       },
-      30010 //30.01 seconds
+      30000000
     );
   }
   

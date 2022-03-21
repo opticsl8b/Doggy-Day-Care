@@ -1,6 +1,7 @@
 async function loginFormHandler(event) {
     event.preventDefault();
   
+    // selector input TBD
     const email = document.querySelector("#email-login").value.trim();
     const password = document.querySelector("#password-login").value.trim();
   
@@ -14,6 +15,7 @@ async function loginFormHandler(event) {
         headers: { "Content-Type": "application/json" },
       });
       if (response.ok) {
+        // route TBD
         document.location.replace("/dashboard");
       } else {
         alert("Incorrect email or password");
@@ -25,6 +27,7 @@ async function loginFormHandler(event) {
   }
   
   document
+    // selector input TBD
     .querySelector(".form-login .btn-primary")
     .addEventListener("click", loginFormHandler);
   

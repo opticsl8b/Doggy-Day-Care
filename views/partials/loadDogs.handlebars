@@ -1,0 +1,28 @@
+ {{#each user.dogs as |dog|}}
+
+<!--Add Dog Info Here-->
+{{dog.name}}
+{{dog.breed}}
+{{dog.age}}
+{{dog.gender}}
+{{dog.size}}
+{{dog.info}}
+   
+    <section class="card">
+      <a href="/post/edit/{{id}}">
+        <h2 class="getBlogtitle">{{title}}</h2>
+
+        <div class="card-body d-flex flex-column align-items-center">
+          
+          <p class="getBlogContent">{{content}}</p>
+          
+          <h4>Author: {{user.name}}</h4>
+          <h5>Created at: {{format_date blog_date}}</h5>
+          
+        </div>
+      </a>
+    </section>
+
+<!--Add Edit Button-->
+
+{{/each}}

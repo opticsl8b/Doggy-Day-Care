@@ -33,17 +33,11 @@ User.init(
     phone_number: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+    },
 
     address: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
+      allowNull: true,
     },
 
     email: {
@@ -52,16 +46,18 @@ User.init(
       unique: true,
       validate: {
         isEmail: true,
-      },
+        }
     },
+    
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [8],
-      },
+        },
     },
   },
+  
   {
     hooks: {
       beforeCreate: async (newUserData) => {

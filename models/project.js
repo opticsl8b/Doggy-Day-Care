@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+
 class Project extends Model {}
 
 Project.init(
@@ -11,30 +12,58 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+
+    dog_name: {
       type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
       allowNull: false,
     },
+
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+
+    breed:{
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+
+    age:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+
+    size: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
+        },
       },
-    },
+      
+      note: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+    
+      },
+    
   },
+
   {
     sequelize,
     timestamps: false,
@@ -42,6 +71,7 @@ Project.init(
     underscored: true,
     modelName: 'project',
   }
+
 );
 
 module.exports = Project;

@@ -1,0 +1,107 @@
+h1 {
+    color: rgb(235, 235, 235);
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.navbar-text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.dog-pic {    
+    position: fixed;
+    bottom: 0px;
+    height: 45%;
+    width: 20%;
+}
+
+.pic-right {
+    right: 0px;
+}
+
+.pic-left {
+    left: 0px;
+}
+
+.container-xl {
+    width: 100%;
+}
+
+.navbarButton {
+    color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(1, 1, 5);
+    border-radius: 10%;
+    margin-bottom: 0.5%;
+    padding: 0.5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.login-card {
+    margin-top: 2%;
+    background-color: rgb(202, 202, 202);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10%;
+    padding: 2%;
+}
+
+.signup-card {
+    margin-top: 2%;
+    background-color: rgb(202, 202, 202);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5%;
+    padding: 2%;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.loginButton {
+    color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(1, 1, 5);
+    border-radius: 10%;
+    margin-bottom: 0.5%;
+    padding: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 1400px) {
+    .dog-pic {    
+        height: 45%;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .dog-pic {    
+        height: 45%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .dog-pic {    
+        height: 45%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .dog-pic {    
+        height: 45%;
+        width: 50%;
+    }
+}

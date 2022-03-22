@@ -16,7 +16,7 @@ async function loginFormHandler(event) {
       });
       if (response.ok) {
         // route TBD
-        document.location.replace("/dashboard");
+        document.location.replace("/homepag");
       } else {
         alert("Incorrect email or password");
         document.location.reload();

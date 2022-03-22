@@ -1,25 +1,25 @@
 <div class="d-flex justify-content-center">    
     <div class="signup-card">
         <h2 class="page-title login-margin">Add A Dog</h2>
-        <form class="form login-form d-flex flex-column justify-content-center align-items-center">
-            <div class="form-group d-flex flex-column justify-content-center align-items-center">
-              <label for="dog-name">Dogs Name</label>
-              <input class="form-input" type="text" id="dog-name"/>
+        <form class="form login-form d-flex flex-column justify-content-center align-items-left">
+            <div class="form-group d-flex inputBox">
+              <label for="dog-name ageBox">Name</label>
+              <input class="form-input labelBox" type="text" id="dog-name"/>
             </div>
-            <div class="form-group">
+            <div class="form-group inputBox">
               <label for="gender">Gender</label>
               <select name="dog-gender" id="dog-gender">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
             </div>
-            <div class="form-group d-flex flex-column justify-content-center align-items-center">
-              <label for="dog-age">Age</label>
-              <input class="form-input" type="number" id="dog-age" />
+            <div class="form-group d-flex inputBox">
+              <label for="dog-age ">Age</label>
+              <input class="form-input labelBox" type="number" id="dog-age" />
             </div>
-            <div class="form-group d-flex flex-column justify-content-center align-items-center">
-              <label for="dog-breed">Breed</label>
-              <input class="form-input" type="text" id="dog-breed" />
+            <div class="form-group d-flex inputBox">
+              <label for="dog-breed labelBox">Breed</label>
+              <input class="form-input labelBox" type="text" id="dog-breed" />
             </div>
             <div class="form-group">
               <label for="dog-size">Size</label>
@@ -30,11 +30,13 @@
                 <option value="X-Large">X-Large</option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="form-group inputBox d-flex flex-column justify-content-center align-items-center">
               <label for="dog-info">Additional Info</label>
-              <textarea class="form-input" type="text" id="dog-info"></textarea>
+              <textarea class="form-input dog-info" type="text" id="dog-info"></textarea>
+            </div>
             </div>            
-            <button class="homeButton" type="submit">Add Dog</button>            
+            <button class="addDogButton" type="submit">Add Dog</button>            
         </form>
     </div>
 </div>  

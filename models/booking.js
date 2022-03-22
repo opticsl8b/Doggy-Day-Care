@@ -12,17 +12,6 @@ Booking.init(
       autoIncrement: true,
     },
 
-    dog_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-
-    activity_id: {
-        type: DataTypes.INTEGER,
-      allowNull: false,
-      autoIncrement: true,
-    },
-
     date: {
         field: "date",
         type: DataTypes.DATE, 
@@ -34,15 +23,20 @@ Booking.init(
         type: DataTypes.TIME,
         allowNull: false,
     },
-},
 
-{
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
+      
+  },
+  {
     sequelize,
     timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "booking",
-}
+  }
 
 );
 

@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const { Dog, Booking } = require('../models');
 
 class Activity extends Model {}
 
@@ -12,11 +13,21 @@ Activity.init(
       autoIncrement: true,
     },
 
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-
+    dog_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: Dog,
+        key: 'id',
+      },
     },
+
+    booking_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: Booking,
+        key: 'id',
+      },
+    }
  
    },   
 

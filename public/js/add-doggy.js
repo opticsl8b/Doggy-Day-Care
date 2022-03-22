@@ -7,7 +7,7 @@ async function newFormHandler(event) {
     const age = document.querySelector('#dog-age').value;
     const breed = document.querySelector('#dog-breed').value;
     const size = document.querySelector('#dog-size').value;
-    const additionalInfo = document.querySelector('#').value;
+    const additionalInfo = document.querySelector('#dog-info').value;
 
     if (date && session && dog & activityName){
     const response = await fetch("/api/posts", {

@@ -28,6 +28,6 @@ async function loginFormHandler(event) {
   
   document
     // selector input TBD
-    .querySelector(".form-login .btn-primary")
+    .querySelector(".loginButton")
     .addEventListener("click", loginFormHandler);
   

@@ -29,3 +29,5 @@ Activity.init(
 }
 
 );
+
+module.exports = Activity;

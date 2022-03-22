@@ -18,15 +18,21 @@ Booking.init(
     },
 
     activity_id: {
-
+        type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
     },
 
     date: {
-
+        field: "date",
+        type: DataTypes.DATE, 
+        allowNull: false,
     },
 
     session: {
-
+        field: "session_time",
+        type: DataTypes.TIME,
+        allowNull: false,
     },
 },
 
@@ -35,7 +41,9 @@ Booking.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: "comment",
+    modelName: "booking",
 }
 
-)
+);
+
+module.exports = Booking;

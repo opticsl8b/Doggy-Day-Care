@@ -15,15 +15,11 @@ Dog.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Dog.hasMany(Activity, {
-  foreignKey: "activity_id",
-  onDelete: "CASCADE",
-});
+//Links dog to booking via the Activity Model//
+Dog.belongsToMany(Booking, { through: Activity, foreignKey: "dog_id" });
 
-Activity.hasMany(Dog, {
-  foreignKey: "dog_id",
-});
-
+//Links booking to dog via the Activity Model//
+Booking.belongsToMany(Dog, { through: Activity, foreignKey: "booking_id" });
 
 module.exports = { User, Dog, Activity, Booking };
 

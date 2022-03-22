@@ -5,7 +5,7 @@ async function signUpHandler(event) {
   const email = document.querySelector('#email-signup').value.trim();
   const firstName = document.querySelector('#firstname-signup').value.trim();
   const lastName = document.querySelector('#lastname-signup').value.trim();
-  const phoneNumber = document    .querySelector('#phone-number-signup')
+  const phoneNumber = document.querySelector('#phone-number-signup')
     .value.trim();
   const address = document.querySelector('#address-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
@@ -25,7 +25,7 @@ async function signUpHandler(event) {
     });
     if (response.ok) {
       // route input TBD
-      document.location.replace('/TBD');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }

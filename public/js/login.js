@@ -16,7 +16,7 @@ async function loginFormHandler(event) {
       });
       if (response.ok) {
         // route TBD
-        document.location.replace("/dashboard");
+        document.location.replace("/home");
       } else {
         alert("Incorrect email or password");
         document.location.reload();
@@ -28,6 +28,6 @@ async function loginFormHandler(event) {
   
   document
     // selector input TBD
-    .querySelector(".form-login .btn-primary")
+    .querySelector(".loginButton")
     .addEventListener("click", loginFormHandler);
   

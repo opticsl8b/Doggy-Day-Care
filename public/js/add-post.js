@@ -17,7 +17,7 @@ async function newFormHandler(event) {
     });
     if (response.ok) {
       // string input TBD
-      document.location.replace("/dashboard");
+      document.location.replace("/home");
     } else alert(response.status);
   }
   

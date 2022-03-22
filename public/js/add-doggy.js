@@ -2,12 +2,12 @@ async function newFormHandler(event) {
     event.preventDefault();
   
     // string input TBD
-    const name = document.querySelector('input[name="doggy-name"]').value;
-    const gender = document.querySelector('input[name="doggy-gender"]').value;
-    const age = document.querySelector('input[name="doggy-age"]').value;
-    const breed = document.querySelector('input[name="breed"]').value;
-    const size = document.querySelector('input[name="size"]').value;
-    const additionalInfo = document.querySelector('input[name="additional-info"]').value;
+    const name = document.querySelector('#dog-name').value;
+    const gender = document.querySelector('#dog-gender').value;
+    const age = document.querySelector('#dog-age').value;
+    const breed = document.querySelector('#dog-breed').value;
+    const size = document.querySelector('#dog-size').value;
+    const additionalInfo = document.querySelector('#dog-info').value;
 
     if (date && session && dog & activityName){
     const response = await fetch("/api/posts", {
@@ -26,7 +26,7 @@ async function newFormHandler(event) {
     });
     if (response.ok) {
       // string input TBD
-      document.location.replace("/dashboard");
+      document.location.replace("/home");
     } else alert(response.status);
   }
   }

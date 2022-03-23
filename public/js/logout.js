@@ -17,7 +17,7 @@ async function handleLogout() {
             alert(
               "You've been logged out, please re-login to access your dashboard"
             );
-            location.replace("/login");
+            location.replace("/lander");
           }
         });
       },

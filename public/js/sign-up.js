@@ -1,11 +1,12 @@
 async function signUpHandler(event) {
   event.preventDefault();
-console.log("luca");
+  
   // input in the string TBD
   const email = document.querySelector('#email-signup').value.trim();
   const firstName = document.querySelector('#firstname-signup').value.trim();
   const lastName = document.querySelector('#lastname-signup').value.trim();
-  const phoneNumber = document.querySelector('#phone-number-signup')
+  const phoneNumber = document
+    .querySelector('#phone-number-signup')
     .value.trim();
   const address = document.querySelector('#address-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
@@ -25,12 +26,12 @@ console.log("luca");
     });
     if (response.ok) {
       // route input TBD
-      document.location.replace('/homepage');
+      document.location.replace('/home');
     } else {
       alert(response.statusText);
     }
-  }else if (!password || !email) {
-    alert("You need to provide both: email and password");
+  } else if (!password || !email) {
+    alert('You need to provide both: email and password');
   }
 }
 

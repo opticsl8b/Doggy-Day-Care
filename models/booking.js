@@ -12,18 +12,11 @@ Booking.init(
       autoIncrement: true,
     },
 
-    date: {
-        field: "date",
+    session_datetime: {
         type: DataTypes.DATE, 
         allowNull: false,
     },
-
-    session: {
-        field: "session_time",
-        type: DataTypes.TIME,
-        allowNull: false,
-    },
-
+   
     name: {
       type: DataTypes.STRING,
       allowNull: false,

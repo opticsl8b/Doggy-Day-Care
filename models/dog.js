@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const User = require('./user');
 
+const User = require('./user');
 
 class Dog extends Model {}
 
@@ -43,19 +43,18 @@ Dog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-
+    
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: User,
         key: 'id',
         },
       },
       
       note: {
         type: DataTypes.TEXT,
-        allowNull: false,
-    
+        allowNull: false,    
       },
     
   },

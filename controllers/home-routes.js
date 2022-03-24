@@ -5,7 +5,7 @@ const { Activity, Dog, User, Booking } = require('../models');
 router.get("/signup", (req, res) => {
   // check session and redirect to the homepage if exists
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/home");
     return;
   }
   res.render("signup");
@@ -15,7 +15,7 @@ router.get("/signup", (req, res) => {
 router.get("/login", (req, res) => {
   // check  session and redirect to the homepage if exists
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/home");
     return;
   }
   res.render("login");

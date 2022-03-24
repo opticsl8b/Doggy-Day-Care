@@ -1,6 +1,6 @@
 async function signUpHandler(event) {
   event.preventDefault();
-
+console.log("luca");
   // input in the string TBD
   const email = document.querySelector('#email-signup').value.trim();
   const firstName = document.querySelector('#firstname-signup').value.trim();
@@ -29,8 +29,10 @@ async function signUpHandler(event) {
     } else {
       alert(response.statusText);
     }
+  }else if (!password || !email) {
+    alert("You need to provide both: email and password");
   }
 }
 
 // input in the string TBD
-document.querySelector('#signUpform').addEventListener('click', signUpHandler);
+document.querySelector('.loginButton').addEventListener('click', signUpHandler);

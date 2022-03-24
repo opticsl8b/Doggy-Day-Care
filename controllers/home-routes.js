@@ -63,16 +63,16 @@ router.get('/home', async (req, res) => {
 
  router.get('/contact', async (req, res) => {
   try {
-     res.render('contact') //RENDERS LANDER WITH MAIN
+     res.render('contact') //RENDERS CONTACT WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
    }
  });
 
- router.get('/calender', async (req, res) => {
+ router.get('/appointments', async (req, res) => {
   try {
-     res.render('calender') //RENDERS LANDER WITH MAIN
+     res.render('myAppts') //RENDERS MYAPPTS WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
@@ -81,7 +81,7 @@ router.get('/home', async (req, res) => {
 
 router.get('/addDog', async (req, res) => {
   try {
-     res.render('addDog') //RENDERS LANDER WITH MAIN
+     res.render('addDog') //RENDERS ADD DOG WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);

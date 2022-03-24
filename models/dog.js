@@ -14,11 +14,6 @@ Dog.init(
       autoIncrement: true,
     },
     
-    user_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-
     dog_name: {
       type: DataTypes.STRING,
       allowNull: false,

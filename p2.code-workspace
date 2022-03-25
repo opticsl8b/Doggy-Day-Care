@@ -1,13 +1,16 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "..\\..\\..\\Week 6\\Assets"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Doggy-Day-Care"
-	}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\..\\..\\Week 6\\Assets"
+    },
+    {
+      "path": "..\\..\\..\\Week 13"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Doggy-Day-Care"
+  }
 }

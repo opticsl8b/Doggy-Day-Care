@@ -49,7 +49,7 @@ VALUES
    
 
 
-INSERT INTO Activity (dog_id, booking_id)
+INSERT INTO activity (dog_id, booking_id)
 VALUES
 
     (1, 1),
@@ -62,6 +62,21 @@ VALUES
     (8, 3),
     (9, 3),
     (10, 1);
+
+
+INSERT INTO Message (title, message_content, created_at, updated_at, user_id)
+VALUES
+
+    ("Booking request for Basil", "Hi, I was wondering if you have any spots available for grooming next...", sysdate(), sysdate(), 4),
+    ("Booking cancelation", "Hi, I just wanted to let you know that unfortunately, I am not going to be able to...", sysdate(), sysdate(), 7),
+    ("Checking availability for acommodation", "Hi, we are planning to go on a holiday to Bali ...", sysdate(), sysdate(), 3),
+    ("Obedience training", "Hi, I just wwondering when does the period for enrolment starts? ...", sysdate(), sysdate(), 5),
+    ("Feedback", "Hi, I would like to thank...", sysdate(), sysdate(), 2),
+    ("Enquiry", "Hi, Do you have spots for more puppies in daycare on Mondays?...", sysdate(), sysdate(), 1),
+    ("This Friday event's", "Hi, is it possible to buy more tickets for...", sysdate(), sysdate(), 8),
+    ("Grooming next week", "Hi, I woudl like to book a session for my dog Bear...", sysdate(), sysdate(), 9),
+    ("Extra day of day care", "Hi, on the 13 of May I am going to be working late ...", sysdate(), sysdate(), 12),
+    ("Change session", "Hi, is it possible to attent a session in the morning instead of...", sysdate(), sysdate(), 10),
     
 
 

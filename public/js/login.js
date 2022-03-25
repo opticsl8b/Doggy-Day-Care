@@ -1,6 +1,6 @@
 async function loginFormHandler(event) {
     event.preventDefault();
-  
+  console.log("aaa");
     // selector input TBD
     const email = document.querySelector("#email-login").value.trim();
     const password = document.querySelector("#password-login").value.trim();
@@ -28,6 +28,6 @@ async function loginFormHandler(event) {
   
   document
     // selector input TBD
-    .querySelector(".loginButton")
+    .querySelector("#loginBtn")
     .addEventListener("click", loginFormHandler);
   

@@ -1,5 +1,5 @@
 h1 {
-  color: rgb(235, 235, 235);
+  color: rgb(192, 234, 249);
 }
 
 h2 {
@@ -15,6 +15,10 @@ h3 {
 
 a {
   text-align: center;
+}
+
+.navbar{
+  background-color: aliceblue;
 }
 
 .navbar-text {
@@ -63,7 +67,7 @@ body {
   color: whitesmoke;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(1, 1, 5);
+  background-color: rgb(19, 59, 133);
   border-radius: 10%;
   margin-bottom: 0.5%;
   padding: 0.5%;
@@ -109,6 +113,7 @@ textarea {
 }
 
 .loginButton {
+  flex-wrap: wrap;
   color: whitesmoke;
   margin-left: auto;
   margin-right: auto;
@@ -124,13 +129,24 @@ textarea {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(1, 1, 5);
+  background-color: rgb(12, 58, 94);
   border-radius: 1%;
   margin-bottom: 0.5%;
   padding: 5%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(247, 247, 247, 0.35) 0px 5px 15px;
   text-decoration: none;
   margin-bottom: 5%;
+}
+
+.loginButton {
+  color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(12, 58, 94);
+  border-radius: 20%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: small;
+  margin-top: 1%;
 }
 
 .addDogButton {

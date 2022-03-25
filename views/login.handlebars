@@ -2,18 +2,24 @@
   <div class="login-card">
     <h2 class="page-title login-margin">Login</h2>
     <form class="form login-form d-flex flex-column justify-content-center align-items-left">
-      <div class="form-group">
+      {{!-- <div class="form-group">
         <label for="email-login">Email:</label>
         <input class="form-input" type="email" id="email-login" />
+      </div> --}}
+      <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
       </div>
       <div class="form-group">
         <label for="password-login">Password:</label>
         <input class="form-input" type="password" id="password-login" />
       </div>
       <div class="form-group d-flex">
-        <button class="loginButton" type="submit">Login</button>
-        <button class="loginButton" href="/signup">Sign Up</button>
+        <a href="#" id="loginBtn" class="loginButton" >Login</a>
+        <a href="/signup" id="signupBtn" class="loginButton" >Sign Up</a>
       </div>
     </form>
   </div>
 </div>
+
+<script src="/js/login.js"></script>

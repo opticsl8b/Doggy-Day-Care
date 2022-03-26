@@ -1,19 +1,18 @@
 async function newBookHandler(event) {
-    event.preventDefault();
-  console.log("book");
+    event.preventDefault();  
     // string input TBD
     const day = document.querySelector('#booking-day').value;
     const session = document.querySelector('#booking-session').value;
     const dog = document.querySelector('#booking-dog').value;
     const service = document.querySelector('#booking-service').value;
-     
-      //dog input here is the dogs ID not the dogs NAME
-    if (day && session && dog && service){
+    const daysession = day + " " + session;
+
+    //dog input here is the dogs ID not the dogs NAME
+    if (daysession && dog && service){
     const response = await fetch("/api/session", {
       method: "POST",
       body: JSON.stringify({
-        day,
-        session,
+        daysession, // YYYY-MM-DD HH-MM-SS format
         dog,  //ID value
         service,
               }),

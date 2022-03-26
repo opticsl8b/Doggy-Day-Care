@@ -6,15 +6,15 @@ async function newBookHandler(event) {
     const session = document.querySelector('#booking-session').value;
     const dog = document.querySelector('#booking-dog').value;
     const service = document.querySelector('#booking-service').value;
-    
-
+     
+      //dog input here is the dogs ID not the dogs NAME
     if (day && session && dog && service){
-    const response = await fetch("/api/posts", {
+    const response = await fetch("/api/session", {
       method: "POST",
       body: JSON.stringify({
         day,
         session,
-        dog,
+        dog,  //ID value
         service,
               }),
       headers: {

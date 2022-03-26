@@ -23,10 +23,10 @@
                 <div class="form-group">
                   <label for="booking-dog">Dog</label>
                   <select name="booking-dog" id="booking-dog">
-                    <!--TODO: Add handlebars syntax around dogs-->
-                    <option value="user-dog-1">Dog 1</option>
-                    <option value="user-dog-2">Dog 2</option>
-                    <option value="user-dog-3">Dog 3</option> 
+                    {{#each dogData as |dog|}}                  
+                    <option class="doggyData" value={{dog.id}}>{{dog.dog_name}}</option>
+                    {{/each}}
+                    
                 </select>             
                 </div>
                 <div class="form-group">
@@ -38,8 +38,8 @@
                       <option value="holiday">Holiday Care</option>
                     </select>  
                 </div>                                    
-                <a href="#" class="homeButton" id="bookBTN">Book</button>            
+                <a href="#" class="homeButton" id="bookBTN">Book</a>            
             </form>
         </div>
 </div>  
-<script src="/js/booking.js"></script>
+<script src="/js/book.js"></script>

@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center">    
+    <div class="signup-card">
+        <h2 class="page-title login-margin">Update A Dog</h2>
+        <form class="form login-form d-flex flex-column justify-content-center align-items-left">
+            <div class="form-group d-flex inputBox">
+              <label for="dog-name ageBox">Name</label>
+              <input class="form-input labelBox" type="text" id="dog-name" value={{dogData.dog_name}} />
+            </div>
+            <div class="form-group inputBox">
+              <label for="gender">Gender</label>
+              <select name="dog-gender" id="dog-gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="form-group d-flex inputBox">
+              <label for="dog-age ">Age</label>
+              <input class="form-input labelBox" type="number" id="dog-age" value={{dogData.age}} />
+            </div>
+            <div class="form-group d-flex inputBox">
+              <label for="dog-breed labelBox">Breed</label>
+              <input class="form-input labelBox" type="text" id="dog-breed" value={{dogData.breed}} />
+            </div>
+            <div class="form-group">
+              <label for="dog-size">Size</label>
+              <select name="dog-size" id="dog-size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="X-Large">X-Large</option>
+              </select>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="form-group inputBox d-flex flex-column justify-content-center align-items-center">
+              <label for="dog-info">Additional Info</label>
+              <textarea class="form-input dog-info" type="text" id="dog-info">{{dogData.note}}</textarea>
+            </div>
+            </div>            
+            <a href="" id="updateBtn" class="homeButton" >Update Dog</a>
+            <a href="" id="deleteBtn" class="homeButton" >Delete Dog</a>             
+        </form>
+    </div>
+</div>  

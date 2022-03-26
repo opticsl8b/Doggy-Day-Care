@@ -22,7 +22,7 @@ a {
 a:hover {
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .navbar-text {

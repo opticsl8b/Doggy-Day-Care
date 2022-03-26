@@ -9,7 +9,7 @@ async function newBookHandler(event) {
 
     //dog input here is the dogs ID not the dogs NAME
     if (daysession && dog && service){
-    const response = await fetch("/api/session", {
+    const response = await fetch("/api/booking", {
       method: "POST",
       body: JSON.stringify({
         daysession, // YYYY-MM-DD HH-MM-SS format
@@ -22,7 +22,7 @@ async function newBookHandler(event) {
     });
     if (response.ok) {
       // string input TBD
-      document.location.replace("/home");
+      document.location.replace("/appointments");
     } else alert(response.status);
   }else if(!day){alert("You need to provide day")}
   else if(!session){alert("You need to provide session")}

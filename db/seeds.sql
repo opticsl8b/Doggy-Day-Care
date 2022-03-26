@@ -68,8 +68,8 @@ INSERT INTO Message (title, message_content, created_at, updated_at, user_id)
 VALUES
 
     ("Booking request for Basil", "Hi, I was wondering if you have any spots available for grooming next...", sysdate(), sysdate(), 4),
-    ("Booking cancelation", "Hi, I just wanted to let you know that unfortunately, I am not going to be able to...", sysdate(), sysdate(), 7),
-    ("Checking availability for acommodation", "Hi, we are planning to go on a holiday to Bali ...", sysdate(), sysdate(), 3),
+    ("Booking cancellation", "Hi, I just wanted to let you know that unfortunately, I am not going to be able to...", sysdate(), sysdate(), 7),
+    ("Checking availability for accommodation", "Hi, we are planning to go on a holiday to Bali ...", sysdate(), sysdate(), 3),
     ("Obedience training", "Hi, I just wwondering when does the period for enrolment starts? ...", sysdate(), sysdate(), 5),
     ("Feedback", "Hi, I would like to thank...", sysdate(), sysdate(), 2),
     ("Enquiry", "Hi, Do you have spots for more puppies in daycare on Mondays?...", sysdate(), sysdate(), 1),

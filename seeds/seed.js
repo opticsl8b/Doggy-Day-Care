@@ -1,25 +1,33 @@
-// const sequelize = require('../config/connection');
-// const { User, Project } = require('../models');
+const sequelize = require('../config/connection');
+const seedDog = require('./seedDog');
+const seedBooking = require('./seedBooking');
+const seedUser = require('./seedUser');
+const seedActivity = require('./seedActivity');
+const seedMessage = require('./seedMessage');
 
-// const userData = require('./userData.json');
-// const projectData = require('./projectData.json');
 
-// const seedDatabase = async () => {
-//   await sequelize.sync({ force: true });
+const seedAll = async () => {
+  await sequelize.sync({ force: true });
+  console.log('\n----- DATABASE SYNCED -----\n');
 
-//   const users = await User.bulkCreate(userData, {
-//     individualHooks: true,
-//     returning: true,
-//   });
+  await seedUser();
+  console.log('\n----- USER SEEDED -----\n');
 
-//   for (const project of projectData) {
-//     await Project.create({
-//       ...project,
-//       user_id: users[Math.floor(Math.random() * users.length)].id,
-//     });
-//   }
+  await seedDog();
+  console.log('\n----- DOG SEEDED -----\n');
 
-//   process.exit(0);
-// };
+  await seedBooking();
+  console.log('\n----- BOOKING SEEDED -----\n');
 
-// seedDatabase();
+
+  await seedActivity();
+  console.log('\n----- ACTIVITY SEEDED -----\n');
+
+  await seedMessage();
+  console.log('\n----- MESSAGE SEEDED -----\n');
+
+
+  process.exit(0);
+};
+
+seedAll();

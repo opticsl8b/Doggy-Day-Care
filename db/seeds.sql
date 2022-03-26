@@ -5,7 +5,7 @@ VALUES
     ("James", "Smith", "0456-789-045", "8 Begley Street, Boogan", "Jmes@live.com", "eHekPc3UTIBgWc5"),
     ("Robert", "Williams", "0491-570-156", "645 Isaac Road, Welshpool", "kddailey@msn.com","jwNyQDGRS4OeMMP"),
     ("Momoko", "Brown", "0491-570-157", "36 Frouds Road, Tarin Rock", "Mom@icloud.com", "37cdaiZCVRxaTjq"),
-    ("John", "Garcia", "0491-570-158", "917 Balonne Street, Orton Park", "mbsn@gmail.com", "b2dadaByZhP4BFz"),
+    ("Juan", "Garcia", "0491-570-158", "917 Balonne Street, Orton Park", "mbsn@gmail.com", "b2dadaByZhP4BFz"),
     ("Jennifer", "Jones", "0491-570-160", "43 Garden Place Road, Buckrabanyule", "Jenni@optonline.net", "gMtDxbBJxAgVhce"),
     ("George", "Miller", "0491-570-161", "764 Roseda Road, Splinter Creek", "George@live.com", "vuoLfpFrHcwDUIm"),
     ("Michael", "Davis", "0491-570-162", "92 Noalimba Avenue, Rollingstone", "Michael@yahoo.ca", "RDmnaFblxhXyH7M"),
@@ -76,7 +76,7 @@ VALUES
     ("This Friday event's", "Hi, is it possible to buy more tickets for...", sysdate(), sysdate(), 8),
     ("Grooming next week", "Hi, I woudl like to book a session for my dog Bear...", sysdate(), sysdate(), 9),
     ("Extra day of day care", "Hi, on the 13 of May I am going to be working late ...", sysdate(), sysdate(), 12),
-    ("Change session", "Hi, is it possible to attent a session in the morning instead of...", sysdate(), sysdate(), 10),
+    ("Change session", "Hi, is it possible to attent a session in the morning instead of...", sysdate(), sysdate(), 10);
     
 
 

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Activity, Dog, User, Booking } = require('../models');
+const withAuth = require('../utils/auth');
 
 // signup endpoint
 router.get("/signup", (req, res) => {
@@ -31,9 +32,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/home', async (req, res) => {
+router.get('/home', withAuth, async (req, res) => {
   try {
-     res.render('homepage') //RENDERS HOMEPAGE WITH MAIN
+
+     res.render('homepage',{ loggedIn: true }) //RENDERS HOMEPAGE WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);

@@ -1,11 +1,11 @@
-async function newFormHandler(event) {
+async function newMessageHandler(event) {
     event.preventDefault();
 
   // string input TBD
-    const title = document.querySelector('input[name="post-title"]').value;
+    const title = document.querySelector('#title').value;
     const content = document.querySelector('#content').value;
   // string input TBD
-    const response = await fetch("/api/posts", {
+    const response = await fetch("/api/messages", {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -23,6 +23,6 @@ async function newFormHandler(event) {
   
   // string input TBD
   document
-    .querySelector(".new-post-form")
-    .addEventListener("submit", newFormHandler);
+    .querySelector(".loginButton")
+    .addEventListener("submit", newMessageHandler);
   

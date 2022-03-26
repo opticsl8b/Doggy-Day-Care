@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-const User = require('./user');
+const User = require('./User');
 
 class Dog extends Model {}
 
@@ -13,7 +13,7 @@ Dog.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    
+
     dog_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -24,39 +24,33 @@ Dog.init(
       allowNull: true,
     },
 
-    breed:{
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-
-    age:{
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-
     breed: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
 
     size: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: User,
         key: 'id',
-        },
       },
-      
-      note: {
-        type: DataTypes.TEXT,
-        allowNull: false,    
-      },
-    
+    },
+
+    note: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
   },
 
   {
@@ -66,7 +60,6 @@ Dog.init(
     underscored: true,
     modelName: 'dog',
   }
-
 );
 
 module.exports = Dog;

@@ -1,5 +1,8 @@
 <div class="d-flex justify-content-center align-items-center">    
     <div class="signup-card">
+        {{#if loggedIn}}
+        <h2 class="page-title login-margin">Hi User</h2>
+        {{/if}}
         <h2 class="page-title login-margin">Welcome to Dogward Daycare</h2>
         <h3 class="page-title login-margin">What Would you Like to do?</h3>
         <div class="form-group d-flex flex-column">

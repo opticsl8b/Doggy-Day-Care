@@ -1,21 +1,21 @@
-async function newFormHandler(event) {
+async function newBookHandler(event) {
     event.preventDefault();
-  
+  console.log("book");
     // string input TBD
     const day = document.querySelector('#booking-day').value;
     const session = document.querySelector('#booking-session').value;
     const dog = document.querySelector('#booking-dog').value;
-    const activityName = document.querySelector('#booking-service').value;
+    const service = document.querySelector('#booking-service').value;
     
 
-    if (day && session && dog & activityName){
+    if (day && session && dog && service){
     const response = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
         day,
         session,
         dog,
-        activityName,
+        service,
               }),
       headers: {
         "Content-Type": "application/json",
@@ -28,12 +28,12 @@ async function newFormHandler(event) {
   }else if(!day){alert("You need to provide day")}
   else if(!session){alert("You need to provide session")}
   else if(!dog){alert("You need to provide dog's name")}
-  else if(!activityName){alert("You need to provide which activity you would like to book")}
+  else if(!service){alert("You need to provide which activity you would like to book")}
 
 }
 
   // string input TBD
   document
-    .querySelector(".new-doggy-form")
-    .addEventListener("submit", newFormHandler);
+    .querySelector("#bookBTN")
+    .addEventListener("click", newBookHandler);
   

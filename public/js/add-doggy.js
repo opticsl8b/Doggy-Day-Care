@@ -9,7 +9,7 @@ async function newDogHandler(event) {
   const size = document.querySelector('#dog-size').value.trim();
   const additionalInfo = document.querySelector('#dog-info').value.trim();
 
-  if (name && gender && age & breed && size) {
+  if (name && gender && age && breed && size) {
     const response = await fetch("/api/dogs", {
       method: 'POST',
       body: JSON.stringify({

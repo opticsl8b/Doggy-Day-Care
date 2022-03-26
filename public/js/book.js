@@ -8,7 +8,7 @@ async function newBookHandler(event) {
     const service = document.querySelector('#booking-service').value;
     
 
-    if (day && session && dog & service){
+    if (day && session && dog && service){
     const response = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({

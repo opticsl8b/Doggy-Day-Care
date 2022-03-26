@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Dog = require('./Dog');
 
 class Booking extends Model {}
 
@@ -17,11 +18,18 @@ Booking.init(
         allowNull: false,
     },
    
-    name: {
+    session_name: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
-      
+    },
+    
+    dog_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: Dog,
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,

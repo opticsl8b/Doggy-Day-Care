@@ -4,20 +4,21 @@
             <form class="form login-form d-flex flex-column justify-content-center align-items-center">
                 <div class="form-group">                    
                         <label for="booking-day">Day</label>
-                        <select name="booking-day" id="booking-day">
-                          <option value="monday">Monday</option>
-                          <option value="tuesday">Tuesday</option>
-                          <option value="wednesday">Wednesday</option>
-                          <option value="thursday">Thursday</option>
-                          <option value="friday">Friday</option>
-                        </select>                      
+                        <input type="date" id="booking-day" name="booking-day"
+                          value="2022-03-29"
+                          min="2022-03-29" max="2023-03-29">                     
                 </div>
                 <div class="form-group">
                     <label for="booking-session">Session</label>
                     <select name="booking-session" id="booking-session">
-                      <option value="Small">Morning</option>
-                      <option value="Medium">Afternoon</option>
-                      <option value="Large">All Day</option>
+                      <option value="09:00:00">9 AM</option>
+                      <option value="10:00:00">10 AM</option>
+                      <option value="11:00:00">11 AM</option>
+                      <option value="12:00:00">12 PM</option>
+                      <option value="13:00:00">1 PM</option>
+                      <option value="14:00:00">2 PM</option>
+                      <option value="15:00:00">3 PM</option>
+                      <option value="16:00:00">4 PM</option>                      
                     </select>
                   </div>
                 <div class="form-group">

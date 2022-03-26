@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// GET /api/users
+// GET all users /api/users
 router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] },

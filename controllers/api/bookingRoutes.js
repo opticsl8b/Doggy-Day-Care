@@ -32,8 +32,6 @@ async function sendEmail(recipient, title, message) {
     });    
 }
 
-
-
 //TODO: Add this into booking post route where response = ok
 // DONT uncomment this yet dont want to flood emails
 // var message = `  
@@ -49,11 +47,6 @@ async function sendEmail(recipient, title, message) {
 
 //     We look forward to seeing you! `
 
-
-
-
-
-
 // Create new booking
 
 router.post('/', async (req, res) => {
@@ -65,6 +58,7 @@ router.post('/', async (req, res) => {
     session_datetime: req.body.daysession,
     session_name: req.body.service,
     dog_id: req.body.dog,
+    user_id: req.session.user_id,
   });
     // DONT uncomment this yet dont want to flood emails
    //sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);

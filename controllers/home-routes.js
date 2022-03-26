@@ -34,8 +34,19 @@ router.get('/', async (req, res) => {
 
 router.get('/home', withAuth, async (req, res) => {
   try {
+    var userID = req.session.user_id;
 
-     res.render('homepage',{ loggedIn: true }) //RENDERS HOMEPAGE WITH MAIN
+    const userData = await User.findOne({
+      where: {
+        id: userID
+      },
+      raw: true,
+    });    
+
+    console.log(userData);
+
+
+     res.render('homepage',{ userData, loggedIn: true }) //RENDERS HOMEPAGE WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);

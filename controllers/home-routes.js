@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Activity, Dog, User, Booking } = require('../models');
+const { Dog, User, Booking } = require('../models');
 const withAuth = require('../utils/auth');
 
 // signup endpoint
@@ -108,13 +108,31 @@ router.get('/home', withAuth, async (req, res) => {
  });
 
  router.get('/appointments', async (req, res) => {
-  try {
-     res.render('myAppts') //RENDERS MYAPPTS WITH MAIN
-   } catch (err) {
-     console.log(err);
-     res.status(500).json(err);
-   }
- });
+  
+    try {
+      var userID = req.session.user_id;
+      const bookingData = await Booking.findAll({
+        where: {
+          user_id: userID
+        },                
+        raw: true,        
+      });          
+       
+      if(bookingData){       
+        res.render('myAppts', { bookingData, loggedIn: req.session.loggedIn } );
+        }
+    
+        if(!bookingData) {
+          res.redirect('/book');
+        }  
+      
+      
+    }catch(err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
 
 router.get('/addDog', async (req, res) => {
   try {

@@ -42,4 +42,4 @@ async function newDogHandler(event) {
 }
 
 // string input TBD
-document.querySelector('#addBtn').addEventListener('submit', newDogHandler);
+document.querySelector('#addBtn').addEventListener('click', newDogHandler);

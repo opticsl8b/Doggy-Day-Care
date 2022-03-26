@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const { Activity, Dog, User, Booking } = require('../models');
+const withAuth = require('../utils/auth');
 
 // signup endpoint
 router.get("/signup", (req, res) => {
   // check session and redirect to the homepage if exists
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/home");
     return;
   }
   res.render("signup");
@@ -15,7 +16,7 @@ router.get("/signup", (req, res) => {
 router.get("/login", (req, res) => {
   // check  session and redirect to the homepage if exists
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/home");
     return;
   }
   res.render("login");
@@ -31,9 +32,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/home', async (req, res) => {
+router.get('/home', withAuth, async (req, res) => {
   try {
-     res.render('homepage') //RENDERS HOMEPAGE WITH MAIN
+
+     res.render('homepage',{ loggedIn: true }) //RENDERS HOMEPAGE WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
@@ -63,16 +65,16 @@ router.get('/home', async (req, res) => {
 
  router.get('/contact', async (req, res) => {
   try {
-     res.render('contact') //RENDERS LANDER WITH MAIN
+     res.render('contact') //RENDERS CONTACT WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
    }
  });
 
- router.get('/calender', async (req, res) => {
+ router.get('/appointments', async (req, res) => {
   try {
-     res.render('calender') //RENDERS LANDER WITH MAIN
+     res.render('myAppts') //RENDERS MYAPPTS WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
@@ -81,7 +83,7 @@ router.get('/home', async (req, res) => {
 
 router.get('/addDog', async (req, res) => {
   try {
-     res.render('addDog') //RENDERS LANDER WITH MAIN
+     res.render('addDog') //RENDERS ADD DOG WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);

@@ -1,38 +1,45 @@
-async function newFormHandler(event) {
-    event.preventDefault();
-  
-    // string input TBD
-    const name = document.querySelector('#dog-name').value;
-    const gender = document.querySelector('#dog-gender').value;
-    const age = document.querySelector('#dog-age').value;
-    const breed = document.querySelector('#dog-breed').value;
-    const size = document.querySelector('#dog-size').value;
-    const additionalInfo = document.querySelector('#dog-info').value;
+async function newDogHandler(event) {
+  event.preventDefault();
+  console.log('AddDog');
+  // string input TBD
+  const name = document.querySelector('#dog-name').value.trim();
+  const gender = document.querySelector('#dog-gender').value.trim();
+  const age = document.querySelector('#dog-age').value.trim();
+  const breed = document.querySelector('#dog-breed').value.trim();
+  const size = document.querySelector('#dog-size').value.trim();
+  const additionalInfo = document.querySelector('#dog-info').value.trim();
 
-    if (date && session && dog & activityName){
-    const response = await fetch("/api/posts", {
-      method: "POST",
+  if (name && gender && age && breed && size) {
+    const response = await fetch("/api/dogs", {
+      method: 'POST',
       body: JSON.stringify({
         name,
         gender,
         age,
         breed,
         size,
-        additionalInfo
+        additionalInfo,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
     if (response.ok) {
-      // string input TBD
-      document.location.replace("/home");
+      // back to manage my dog page
+      document.location.replace('/manage');
     } else alert(response.status);
+  } else if (!name) {
+    alert("Please Tell us Your Dog's Name");
+  } else if (!gender) {
+    alert("Please Tell us Your Dog's Gender");
+  } else if (!age) {
+    alert("Please Tell us Your Dog's age");
+  } else if (!breed) {
+    alert("Please Tell us Your Dog's Breed");
+  } else if (!size) {
+    alert('Please Choose Your Dogs Size.');
   }
-  }
+}
 
-  // string input TBD
-  document
-    .querySelector(".new-doggy-form")
-    .addEventListener("submit", newFormHandler);
-  
+// string input TBD
+document.querySelector('#addBtn').addEventListener('click', newDogHandler);

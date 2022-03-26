@@ -24,7 +24,7 @@
                   <label for="booking-dog">Dog</label>
                   <select name="booking-dog" id="booking-dog">
                     {{#each dogData as |dog|}}                  
-                    <option data-id={{dog.id}} value={{dog.id}}>{{dog.dog_name}}</option>
+                    <option class="doggyData" value={{dog.id}}>{{dog.dog_name}}</option>
                     {{/each}}
                     
                 </select>             
@@ -42,4 +42,4 @@
             </form>
         </div>
 </div>  
-<script src="/js/booking.js"></script>
+<script src="/js/book.js"></script>

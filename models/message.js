@@ -23,11 +23,23 @@ Message.init(
       allowNull: false,
     },
 
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW
+    },
+
+    updated_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: User,
+      reference: {
         key: 'id',
+        model: User,
       },
     },
   },

@@ -5,7 +5,7 @@ VALUES
     ("James", "Smith", "0456-789-045", "8 Begley Street, Boogan", "Jmes@live.com", "eHekPc3UTIBgWc5"),
     ("Robert", "Williams", "0491-570-156", "645 Isaac Road, Welshpool", "kddailey@msn.com","jwNyQDGRS4OeMMP"),
     ("Momoko", "Brown", "0491-570-157", "36 Frouds Road, Tarin Rock", "Mom@icloud.com", "37cdaiZCVRxaTjq"),
-    ("John", "Garcia", "0491-570-158", "917 Balonne Street, Orton Park", "mbsn@gmail.com", "b2dadaByZhP4BFz"),
+    ("Juan", "Garcia", "0491-570-158", "917 Balonne Street, Orton Park", "mbsn@gmail.com", "b2dadaByZhP4BFz"),
     ("Jennifer", "Jones", "0491-570-160", "43 Garden Place Road, Buckrabanyule", "Jenni@optonline.net", "gMtDxbBJxAgVhce"),
     ("George", "Miller", "0491-570-161", "764 Roseda Road, Splinter Creek", "George@live.com", "vuoLfpFrHcwDUIm"),
     ("Michael", "Davis", "0491-570-162", "92 Noalimba Avenue, Rollingstone", "Michael@yahoo.ca", "RDmnaFblxhXyH7M"),
@@ -44,7 +44,7 @@ VALUES
     ('2022-03-30 14:00:00', "Grooming", sysdate(), sysdate()),
     ('2022-03-30 14:00:00', "Obedience Training Level 1", sysdate(), sysdate()),
     ('2022-04-01 14:00:00', "Obedience Training Level 2", sysdate(), sysdate()),
-    ('2022-04-01 10:00:00', "Obedience Training Begginer", sysdate(), sysdate()),
+    ('2022-04-01 10:00:00', "Obedience Training Begginer", sysdate(), sysdate()),npm run session_datetime
     ('2022-04-01 14:00:00', "Grooming", sysdate(), sysdate());
    
 
@@ -68,15 +68,15 @@ INSERT INTO Message (title, message_content, created_at, updated_at, user_id)
 VALUES
 
     ("Booking request for Basil", "Hi, I was wondering if you have any spots available for grooming next...", sysdate(), sysdate(), 4),
-    ("Booking cancelation", "Hi, I just wanted to let you know that unfortunately, I am not going to be able to...", sysdate(), sysdate(), 7),
-    ("Checking availability for acommodation", "Hi, we are planning to go on a holiday to Bali ...", sysdate(), sysdate(), 3),
+    ("Booking cancellation", "Hi, I just wanted to let you know that unfortunately, I am not going to be able to...", sysdate(), sysdate(), 7),
+    ("Checking availability for accommodation", "Hi, we are planning to go on a holiday to Bali ...", sysdate(), sysdate(), 3),
     ("Obedience training", "Hi, I just wwondering when does the period for enrolment starts? ...", sysdate(), sysdate(), 5),
     ("Feedback", "Hi, I would like to thank...", sysdate(), sysdate(), 2),
     ("Enquiry", "Hi, Do you have spots for more puppies in daycare on Mondays?...", sysdate(), sysdate(), 1),
     ("This Friday event's", "Hi, is it possible to buy more tickets for...", sysdate(), sysdate(), 8),
     ("Grooming next week", "Hi, I woudl like to book a session for my dog Bear...", sysdate(), sysdate(), 9),
     ("Extra day of day care", "Hi, on the 13 of May I am going to be working late ...", sysdate(), sysdate(), 12),
-    ("Change session", "Hi, is it possible to attent a session in the morning instead of...", sysdate(), sysdate(), 10),
+    ("Change session", "Hi, is it possible to attent a session in the morning instead of...", sysdate(), sysdate(), 10);
     
 
 

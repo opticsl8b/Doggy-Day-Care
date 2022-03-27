@@ -159,6 +159,9 @@ textarea {
   height: 200px;
 }
 
+
+
+
 .loginButton {
   color: whitesmoke;
   margin-left: auto;
@@ -172,6 +175,9 @@ textarea {
   width:auto;
 }
 
+.landerBtn{
+padding: 2%;
+}
 
 
 .homeButton {

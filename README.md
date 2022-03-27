@@ -7,19 +7,19 @@ create a real-world full-stack application that you'll be able to showcase to po
 
 1. Use of Node.js and Express.js to create a  RESTful API.
 
-2. Use Handlebars.js as the template engine
+2. Use of Handlebars.js as the template engine
 
-3. Use MySQL and the Sequelize ORM for the database
+3. Use of MySQL and the Sequelize ORM for the database
 
-4. Have both GET and POST routes for retrieving and adding new data
+4. GET and POST routes for retrieving and adding new data
 
-5. deployed using Heroku (with data).
+5. Deployed using Heroku (with data).
 
-The project was creating with an intention to make responsive web app that our client could use in their Dog Day Care business.
+The project was created with an intention to make a responsive web application that our client could use in their Dog Day Care business.
 
-The project needed to have options for users to login and sign up, they needed to be a method of booking appointments online and also managing their dog profile and their appointments. The client also wanted an easy "contact us" method, where user can write something and immediately gets sent to the admin.
+The project needed to have options for users to login and sign up, they needed to be a method of booking appointments online and also managing their dog profiles and their existing appointments. The client also wanted an easy "contact us" method, where user can write something and immediately gets sent to the admin.
 
-Below are some photos of planning phase and the the screenshots of how the layout of the app looks like.
+Below are some photos of the planning phase and the the screenshots of how the layout of the app looks like.
 
 # Minimum Viable Product (prototype design - planning phase)
 
@@ -34,7 +34,6 @@ ERD - How the IDs would work
 # Screensot of work
 
 ![three](assets/homepage.png)
-
 ![four](assets/dashboard_one.png)
 ![five](assets/add_dog.png)
 ![six](assets/book_service.png)
@@ -50,4 +49,4 @@ Kishan Gosrani - https://github.com/kishan254
 
 # Additions
 
-We are always looking for ways to make pur code better. If you would like to collaborate and make this app better, please feel free to do so by cloning and pulling the latests files.
+We are always looking for ways to make our code better. If you would like to collaborate and make this app better, please feel free to do so by cloning and pulling the latest files.

@@ -1,5 +1,17 @@
 # Doggy-Day-Care
-Project that utilises skills to create a RESTful API
+## Project that utilises skills to create a RESTful API
+
+| Table of Contents                               |
+| ----------------------------------------------- |
+| [1. About project.](#about-project)                 |
+| [2. Technologies Used.](#technologies-used)                   |
+| [3. Minimum Viable Product.](#minimum-viable-product) |
+| [4. Screenshot of work.](#screenshot-of-work)               |
+| [5. Application URL.](#application-url)                             |
+| [6. Team.](#team)                         |
+| [7. License.](#license)              |
+| [8. Additions.](#additions)     |
+
 
 # About project
 
@@ -21,7 +33,29 @@ The project needed to have options for users to login and sign up, booking appoi
 
 Below are some photos of the planning phase and the the screenshots of how the layout of the app looks like.
 
-# Minimum Viable Product (prototype design - planning phase)
+# Technologies Used 
+
+```
+1. Javascript
+2. HTML 5
+3. CSS
+4. Handlebars.js
+5. Express
+6. Node.js
+7. MySQL2
+8. Express Session
+9. Bcrypt
+10. Heroku
+11. Dotenv
+12. Sequelize 
+13. Bootstrap
+14. Moment.js
+15. Nodemailer
+16. JawsDB
+```
+
+# Minimum Viable Product 
+## Prototype design - Planning phase
 
 Wireframe/planning stage
 
@@ -31,22 +65,32 @@ ERD - How the IDs would work
 
 ![two](assets/ERD.png)
 
-# Screensots of Applications
+# Screenshots of Applications
 
 ![three](assets/homepage.png)
-
 ![four](assets/dashboard_one.png)
 ![five](assets/add_dog.png)
 ![six](assets/book_service.png)
 
+# Application URL
+
+[URL](ADD HEROKU LINK HERE)
+
 # Team
 
-George Cheng - https://github.com/opticsl8b
-Michael Ariti - https://github.com/MichaelFellas
-Mayra Rivas Lara - https://github.com/MayraRivasLara
-Kishan Gosrani - https://github.com/kishan254
+[George Cheng](https://github.com/opticsl8b)
 
+[Michael Ariti](https://github.com/MichaelFellas)
+
+[Mayra Rivas Lara](https://github.com/MayraRivasLara)
+
+[Kishan Gosrani](https://github.com/kishan254)
+
+# License
+
+This project uses the MIT license.
 
 # Additions
 
 We are always looking for ways to make our code better. If you would like to collaborate and make this application better, please feel free to do so by cloning and pulling the latest files.
+

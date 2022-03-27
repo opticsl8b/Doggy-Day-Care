@@ -3,12 +3,14 @@
         <h2 class="page-title login-margin">Update A Dog</h2>
         <form class="form login-form d-flex flex-column justify-content-center align-items-left">
             <div class="form-group d-flex inputBox">
+              <input id="dogID" value={{dogData.id}} class="hide dogID"></input>
               <label for="dog-name ageBox">Name</label>
               <input class="form-input labelBox" type="text" id="dog-name" value={{dogData.dog_name}} />
             </div>
             <div class="form-group inputBox">
               <label for="gender">Gender</label>
               <select name="dog-gender" id="dog-gender">
+                <option selected value={{dogData.gender}}>{{dogData.gender}}</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
@@ -24,6 +26,7 @@
             <div class="form-group">
               <label for="dog-size">Size</label>
               <select name="dog-size" id="dog-size">
+                <option selected value={{dogData.size}}>{{dogData.size}}</option>
                 <option value="Small">Small</option>
                 <option value="Medium">Medium</option>
                 <option value="Large">Large</option>
@@ -41,3 +44,5 @@
         </form>
     </div>
 </div>  
+<script src="/js/edit-doggy.js"></script>
+<script src="/js/delete-doggy.js"></script>

@@ -17,23 +17,25 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
 
-  <header>
-    <nav class='navbar navbar-light'>
-      <div class='container-xl d-flex flex-column'>
-        <span class='navbar-text'>
-          <h1>Dogward Day Care</h1>
-        </span>
-        <div class='row d-flex justify-content-center'>
-          <a class='navbarButton btnSpace' href='/home'> <i class="uil uil-estate nav-icon"></i><br>Home</a>
-          <a class='navbarButton btnSpace' href='/manage'><i class="uil uil-server-network skills-icon"></i><br>Manage My Dogs</a>
-          <a class='navbarButton btnSpace' href='/book'><i class="uil uil-schedule"></i><br>Book A Service</a>
-          <a class='navbarButton btnSpace' href='/contact'><i class="uil uil-mailbox"></i><br>Email Us</a>
-          <a class='navbarButton btnSpace' href='/appointments'><i class="uil uil-history-alt"></i><br>My Appointments</a>
-          {{#if loggedIn}}
-            <a class='navbarButton btnSpace' id='logout' href='#'><i class="uil uil-signout"></i><br>Logout</a>
-          {{else}}
-            <a class='navbarButton btnSpace' href='/login'><i class="uil uil-signin"></i><br>Login</a>
-          {{/if}}
+<header>
+    <nav class="navbar navbar-light bg-dark">
+        <div class = "container-xl d-flex flex-column">
+            <span class="navbar-text">
+                <h1>Doggy Day Care</h1>
+            </span>
+            <div class="row d-flex justify-content-center">
+                
+                {{#if loggedIn}}
+                <a class="navbarButton btnSpace" href="/home">Home</a>
+                <a class="navbarButton btnSpace" href="/manage">Manage My Dogs</a>
+                <a class="navbarButton btnSpace" href="/book">Book A Service</a>                
+                <a class="navbarButton btnSpace" href="/contact">Email Us</a>
+                <a class="navbarButton btnSpace" href="/appointments">My Appointments</a>
+                <a class="navbarButton btnSpace" id="logout" href="">Logout</a>
+                {{else}}
+                <a class="navbarButton btnSpace" href="/login">Login</a>
+                {{/if}}
+            </div>
         </div>
       </div>
     </nav>
@@ -72,8 +74,12 @@
 
   <script src='/js/login.js'></script>
 
-  <script src='/js/sign-up.js'></script>
 
-  <!--TODO: Add login scripts here-->
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+{{else}}
+<script src="/js/login.js"></script>
+<script src="/js/sign-up.js"></script>
+{{/if}}
 
 </html>

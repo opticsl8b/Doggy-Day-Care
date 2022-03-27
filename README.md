@@ -38,7 +38,6 @@ ERD - How the IDs would work
 ![four](assets/dashboard_one.png)
 ![five](assets/add_dog.png)
 ![six](assets/book_service.png)
-![seven](assets/book_service.png)
 
 # Team
 

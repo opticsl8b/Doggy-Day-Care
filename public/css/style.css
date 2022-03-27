@@ -113,10 +113,12 @@ a:hover {
   margin-bottom: 0.5%;
   padding: 0.5%;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  
 }
 
 .navbarButton:hover,
-.loginButton:hover
+.loginButton:hover,
+.homeButton:hover
 {
 background-color: hsl(var(--hue-color),40%,32%);
 }
@@ -147,7 +149,7 @@ background-color: hsl(var(--hue-color),40%,32%);
   width: 30%;
 }
 
-.lander-card{
+.home-card{
   background-color: hsl(var(--hue-color),69%,61%);
 }
 
@@ -172,9 +174,6 @@ textarea {
   height: 200px;
 }
 
-
-
-
 .loginButton {
   color: whitesmoke;
   margin-left: auto;
@@ -198,7 +197,7 @@ padding: 2%;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: hsl(var(--hue-color),69%,61%);;
+  background-color: hsl(var(--hue-color),55%,46%);
   border-radius: 8px;
   margin-bottom: 0.5%;
   padding: 5%;

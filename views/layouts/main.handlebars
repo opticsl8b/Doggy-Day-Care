@@ -17,12 +17,13 @@
                 <h1>Doggy Day Care</h1>
             </span>
             <div class="row d-flex justify-content-center">
+                
+                {{#if loggedIn}}
                 <a class="navbarButton btnSpace" href="/home">Home</a>
                 <a class="navbarButton btnSpace" href="/manage">Manage My Dogs</a>
                 <a class="navbarButton btnSpace" href="/book">Book A Service</a>                
                 <a class="navbarButton btnSpace" href="/contact">Email Us</a>
                 <a class="navbarButton btnSpace" href="/appointments">My Appointments</a>
-                {{#if loggedIn}}
                 <a class="navbarButton btnSpace" id="logout" href="">Logout</a>
                 {{else}}
                 <a class="navbarButton btnSpace" href="/login">Login</a>
@@ -54,10 +55,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <!--Javascript-->
 
+
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+{{else}}
 <script src="/js/login.js"></script>
-
 <script src="/js/sign-up.js"></script>
-
-<!--TODO: Add login scripts here-->
+{{/if}}
 
 </html>

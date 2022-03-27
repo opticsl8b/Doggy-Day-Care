@@ -52,7 +52,7 @@ router.post('/login', (req, res) => {
     req.session.username = loginData.username;
     req.session.loggedIn = true;
 
-    res.json({ user: loginData, message: 'Loggin successfully' });
+    res.json({ user: loginData, message: 'Login successful' });
   });
 });
 

@@ -1,5 +1,17 @@
 # Doggy-Day-Care
-Project that utilises skills to create a RESTful API
+## Project that utilises skills to create a RESTful API
+
+| Table of Contents                               |
+| ----------------------------------------------- |
+| [1. About project.](#about-project)                 |
+| [2. Technologies Used.](#technologies-used)                   |
+| [3. Minimum Viable Product.](#minimum-viable-product) |
+| [4. Screenshot of work.](#screenshot-of-work)               |
+| [5. Application URL.](#application-url)                             |
+| [6. Team.](#team)                         |
+| [7. License.](#license)              |
+| [8. Additions.](#additions)     |
+
 
 # About project
 
@@ -7,21 +19,43 @@ Create a real-world full-stack application that you'll be able to showcase to po
 
 1. Use of Node.js and Express.js to create a  RESTful API.
 
-2. Use Handlebars.js as the template engine
+2. Use of Handlebars.js as the template engine
 
-3. Use MySQL and the Sequelize ORM for the database
+3. Use of MySQL and the Sequelize ORM for the database
 
-4. Have both GET and POST routes for retrieving and adding new data
+4. Utilising GET and POST routes for retrieving and adding new data
 
-5. deployed using Heroku (with data).
+5. Deployed using Heroku (with data).
 
-The project was creating with an intention to make responsive web app that our client could use in their Dog Day Care business.
+The project was created with an intention to make a responsive web application, that our client could use in their Dog Day Care business.
 
-The project needed to have options for users to login and sign up, they needed to be a method of booking appointments online and also managing their dog profile and their appointments. The client also wanted an easy "contact us" method, where user can write something and immediately gets sent to the admin.
+The project needed to have options for users to login and sign up, booking appointments online, managing dog profiles and their already existing appointments. The client also wanted an easy "contact us" method, where user can write something and immediately gets sent to the admin.
 
-Below are some photos of planning phase and the the screenshots of how the layout of the app looks like.
+Below are some photos of the planning phase and the the screenshots of how the layout of the app looks like.
 
-# Minimum Viable Product (prototype design - planning phase)
+# Technologies Used 
+
+```
+1. Javascript
+2. HTML 5
+3. CSS
+4. Handlebars.js
+5. Express
+6. Node.js
+7. MySQL2
+8. Express Session
+9. Bcrypt
+10. Heroku
+11. Dotenv
+12. Sequelize 
+13. Bootstrap
+14. Moment.js
+15. Nodemailer
+16. JawsDB
+```
+
+# Minimum Viable Product 
+## Prototype design - Planning phase
 
 Wireframe/planning stage
 
@@ -31,22 +65,30 @@ ERD - How the IDs would work
 
 ![two](assets/ERD.png)
 
-# Screensot of work
+# Screenshots of Applications
 
 ![three](assets/homepage.png)
-
 ![four](assets/dashboard_one.png)
 ![five](assets/add_dog.png)
 ![six](assets/book_service.png)
-![seven](assets/book_service.png)
+
+# Application URL
+
+[URL](ADD HEROKU LINK HERE)
 
 # Team
 
-George Cheng - https://github.com/opticsl8b
-Michael Ariti - https://github.com/MichaelFellas
-Mayra Rivas Lara - https://github.com/MayraRivasLara
-Kishan Gosrani - https://github.com/kishan254
+[George Cheng](https://github.com/opticsl8b)
 
+[Michael Ariti](https://github.com/MichaelFellas)
+
+[Mayra Rivas Lara](https://github.com/MayraRivasLara)
+
+[Kishan Gosrani](https://github.com/kishan254)
+
+# License
+
+This project uses the MIT license.
 
 # Additions
 

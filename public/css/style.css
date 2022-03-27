@@ -118,18 +118,13 @@ a:hover {
 
 .navbarButton:hover,
 .loginButton:hover,
-.homeButton:hover
+.homeButton:hover,
+.managedog-card:hover
 {
 background-color: hsl(var(--hue-color),40%,32%);
 }
 
-.view-card {
-  background-color: rgb(195, 195, 195);
-  width: 50%;
-  margin-top: 2%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 0.5%;
-}
+
 
 .login-card {
   margin-top: 2%;
@@ -144,7 +139,7 @@ background-color: hsl(var(--hue-color),40%,32%);
   margin-top: 2%;
   background-color: hsl(var(--hue-color),69%,61%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 5%;
+  border-radius: 8px;
   padding: 1%;
   width: 30%;
 }
@@ -161,10 +156,18 @@ background-color: hsl(var(--hue-color),40%,32%);
   padding: 1%;
   width: 10%;
 }
-.managedog-card{
-  border-radius: 8px;
 
+
+
+.dog-tag{
+  margin-bottom: auto;
 }
+
+
+/* .managedog-card{
+  border-radius: 8px;
+  
+} */
 
 .form-input {
   width: 100%;

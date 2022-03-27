@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
     dog_id: req.body.dog,
     user_id: req.session.user_id,
   });
-   res.status(200).json(bookingData);;
+   res.status(200).json(bookingData);
     // DONT uncomment this yet dont want to flood emails
    //sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);
    }catch(err) {
@@ -68,6 +68,21 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/', async (req,res) => {
+
+  Booking.findAll()
+    .then((bookingData) => {
+
+      res.render('bookingData',
+      {
+        session_datetime: req.body.daysession,
+        session_name: req.body.service,
+        dog_id: req.body.dog,
+        user_id: req.session.user_id,
+      } )
+    })
+})
 
 module.exports = router;
 

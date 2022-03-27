@@ -34,8 +34,19 @@ router.get('/', async (req, res) => {
 
 router.get('/home', withAuth, async (req, res) => {
   try {
+    var userID = req.session.user_id;
 
-     res.render('homepage',{ loggedIn: true }) //RENDERS HOMEPAGE WITH MAIN
+    const userData = await User.findOne({
+      where: {
+        id: userID
+      },
+      raw: true,
+    });    
+
+    console.log(userData);
+
+
+     res.render('homepage',{ userData, loggedIn: true }) //RENDERS HOMEPAGE WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
@@ -45,8 +56,20 @@ router.get('/home', withAuth, async (req, res) => {
 
  router.get('/manage', async (req, res) => {
   try {
-     res.render('managedogs') //RENDERS MANAGEDOGS WITH MAIN
-   } catch (err) {
+
+    var userID = req.session.user_id;
+
+    const dogData = await Dog.findAll({
+      where: {
+        user_id: userID
+      },
+      raw: true,
+    });    
+    
+    if(dogData){
+
+     res.render('managedogs', { dogData, loggedIn: req.session.loggedIn }) //RENDERS MANAGEDOGS WITH MAIN
+   }}catch (err) {
      console.log(err);
      res.status(500).json(err);
    }
@@ -55,8 +78,20 @@ router.get('/home', withAuth, async (req, res) => {
 
  router.get('/book', async (req, res) => {
   try {
-     res.render('servicebooker') //RENDERS SERVICEBOOKER WITH MAIN
-   } catch (err) {
+
+    var userID = req.session.user_id;
+
+    const dogData = await Dog.findAll({
+      where: {
+        user_id: userID
+      },
+      raw: true,
+    });    
+    
+    if(dogData){ 
+
+    res.render('servicebooker', { dogData, loggedIn: req.session.loggedIn }) //RENDERS SERVICEBOOKER WITH MAIN
+   }} catch (err) {
      console.log(err);
      res.status(500).json(err);
    }
@@ -73,13 +108,31 @@ router.get('/home', withAuth, async (req, res) => {
  });
 
  router.get('/appointments', async (req, res) => {
-  try {
-     res.render('myAppts') //RENDERS MYAPPTS WITH MAIN
-   } catch (err) {
-     console.log(err);
-     res.status(500).json(err);
-   }
- });
+  
+    try {
+      var userID = req.session.user_id;
+      const bookingData = await Booking.findAll({
+        where: {
+          user_id: userID
+        },                
+        raw: true,        
+      });          
+       
+      if(bookingData){       
+        res.render('myAppts', { bookingData, loggedIn: req.session.loggedIn } );
+        }
+    
+        if(!bookingData) {
+          res.redirect('/book');
+        }  
+      
+      
+    }catch(err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
 
 router.get('/addDog', async (req, res) => {
   try {

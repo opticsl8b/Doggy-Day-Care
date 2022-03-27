@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-center">    
     <div class="signup-card">
-        <h2 class="page-title login-margin">Add A Dog</h2>
+        <h2 class="page-title login-margin">Update A Dog</h2>
         <form class="form login-form d-flex flex-column justify-content-center align-items-left">
             <div class="form-group d-flex inputBox">
               <label for="dog-name ageBox">Name</label>
-              <input class="form-input labelBox" type="text" id="dog-name"/>
+              <input class="form-input labelBox" type="text" id="dog-name" value={{dogData.dog_name}} />
             </div>
             <div class="form-group inputBox">
               <label for="gender">Gender</label>
@@ -15,11 +15,11 @@
             </div>
             <div class="form-group d-flex inputBox">
               <label for="dog-age ">Age</label>
-              <input class="form-input labelBox" type="number" id="dog-age" />
+              <input class="form-input labelBox" type="number" id="dog-age" value={{dogData.age}} />
             </div>
             <div class="form-group d-flex inputBox">
               <label for="dog-breed labelBox">Breed</label>
-              <input class="form-input labelBox" type="text" id="dog-breed" />
+              <input class="form-input labelBox" type="text" id="dog-breed" value={{dogData.breed}} />
             </div>
             <div class="form-group">
               <label for="dog-size">Size</label>
@@ -30,16 +30,14 @@
                 <option value="X-Large">X-Large</option>
               </select>
             </div>
-            <!--<label for="img">A photo of your Dog!</label>
-            <input type="file" id="img" name="img" accept="image/*"> Could have a photo here if i figure out how to store it -->
             <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="form-group inputBox d-flex flex-column justify-content-center align-items-center">
               <label for="dog-info">Additional Info</label>
-              <textarea class="form-input dog-info" type="text" id="dog-info"></textarea>
+              <textarea class="form-input dog-info" type="text" id="dog-info">{{dogData.note}}</textarea>
             </div>
             </div>            
-            <a href="#" id="addBtn" class="homeButton" >Add Dog</a>            
+            <a href="" id="updateBtn" class="homeButton" >Update Dog</a>
+            <a href="" id="deleteBtn" class="homeButton" >Delete Dog</a>             
         </form>
     </div>
 </div>  
-<script src="/js/add-doggy.js"></script>

@@ -1,14 +1,14 @@
 <div class="d-flex justify-content-center align-items-center">    
     <div class="signup-card">
         {{#if loggedIn}}
-        <h2 class="page-title login-margin">Hi User</h2>
+        <h2 class="page-title login-margin">Hi {{userData.first_name}} {{userData.last_name}}</h2>
         {{/if}}
         <h2 class="page-title login-margin">Welcome to Dogward Daycare</h2>
         <h3 class="page-title login-margin">What Would you Like to do?</h3>
         <div class="form-group d-flex flex-column">
             <a class="homeButton" href="/manage">Manage My Dogs</a>
             <a class="homeButton" href="/book">Book a Service</a>
-            <a class="homeButton" href="/calender">View this weeks Classes</a>
+            <a class="homeButton" href="/myAppts">View my Bookings</a>
             <a class="homeButton" href="/contact">Contact Us</a>
             <a class="homeButton" id="logout" href="/login">Logout</a>            
         </div>

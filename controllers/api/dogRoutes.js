@@ -16,6 +16,34 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+//Get Dog by ID for Editing
+
+router.get('/:id', withAuth, async (req, res) => {
+  
+  try {
+  
+  dogData = await Dog.findByPk(req.params.id, {
+    attributes: ['id', 'dog_name', 'gender', 'breed', 'age', 'size', 'note'],
+    raw: true,
+    
+  })
+
+  if(dogData){   
+   
+    console.log(dogData);
+    
+    res.render('editDog', { dogData, loggedIn: req.session.loggedIn } );
+    }
+
+    if(!dogData) {
+      res.redirect('/manage');
+    }
+    } catch(err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+});
+
 // Create a dog
 
 router.post('/', withAuth, (req, res) => {

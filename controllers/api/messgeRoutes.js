@@ -1,18 +1,22 @@
 const router = require('express').Router();
-const { Message } = require('../../models/Message');
+const { User, Message } = require("../../models");
 
 // Create new message
 
-router.post('/', (req, res) => {
-  Message.create({
+router.post('/', async (req, res) => {
+
+  try {  
+    const user = await User.findByPk(req.session.user_id);
+    const msgData = await Message.create({    
     title: req.body.title,
     message_content: req.body.content,
-  })
-    .then((createdData) => res.json(createdData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  });
+    msgData.setUser(user);
+    res.json(msgData);
+} catch (err) {
+  console.log(err);
+  res.status(500).json(err);
+}
 });
 
 module.exports = router;

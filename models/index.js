@@ -27,4 +27,13 @@ User.hasMany(Message, {
 //Links message to user via User Model//
 Message.belongsTo(User, { foreignKey: 'user_id' });
 
-module.exports = { User, Dog, Activity, Booking };
+User.hasMany(Booking, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
+Booking.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+module.exports = { User, Dog, Activity, Booking, Message };

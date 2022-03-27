@@ -1,6 +1,6 @@
 async function signUpHandler(event) {
   event.preventDefault();
-  
+     
   // input in the string TBD
   const email = document.querySelector('#email-signup').value.trim();
   const firstName = document.querySelector('#firstname-signup').value.trim();
@@ -12,6 +12,7 @@ async function signUpHandler(event) {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (firstName && lastName && phoneNumber && address && email && password) {
+   
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({

@@ -33,6 +33,15 @@ h3 {
   text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
 }
 
+h4 {
+  margin-top: -5%;
+  text-align: center;
+  margin-bottom: 10%;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+
+
 a {
   text-align: center;
   text-decoration: none;
@@ -136,6 +145,10 @@ background-color: hsl(var(--hue-color),40%,32%);
   border-radius: 5%;
   padding: 1%;
   width: 30%;
+}
+
+.lander-card{
+  background-color: hsl(var(--hue-color),69%,61%);
 }
 
 .addDogCard {

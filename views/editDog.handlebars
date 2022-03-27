@@ -3,6 +3,7 @@
         <h2 class="page-title login-margin">Update A Dog</h2>
         <form class="form login-form d-flex flex-column justify-content-center align-items-left">
             <div class="form-group d-flex inputBox">
+              <input id="dogID" value={{dogData.id}} class="hide dogID"></input>
               <label for="dog-name ageBox">Name</label>
               <input class="form-input labelBox" type="text" id="dog-name" value={{dogData.dog_name}} />
             </div>
@@ -41,3 +42,5 @@
         </form>
     </div>
 </div>  
+<script src="/js/edit-doggy.js"></script>
+<script src="/js/delete-doggy.js"></script>

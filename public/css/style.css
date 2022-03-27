@@ -22,13 +22,15 @@ h1 {
 h2 {
   text-align: center;
   margin-bottom: 5%;
+  color: rgb(235, 235, 235);
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
 }
 
 h3 {
   margin-top: -5%;
   text-align: center;
   margin-bottom: 10%;
-  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
 }
 
 a {
@@ -58,13 +60,17 @@ a:hover {
 .dog-pic {
   position: fixed;
   bottom: 0px;
-  height: 45%;
-  width: 20%;
+  height: 50%;
+  width: 30%;
   z-index: -1;
 }
 
 .pic-right {
   right: 0px;
+}
+
+.pic-left {
+  left: 0px;
 }
 
 .inputBox {
@@ -79,9 +85,7 @@ a:hover {
   text-align: center;
 }
 
-.pic-left {
-  left: 0px;
-}
+
 
 .container-xl {
   width: 100%;

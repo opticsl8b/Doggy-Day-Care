@@ -1,5 +1,5 @@
 const { TIME } = require('sequelize/types');
-const { Booking } = require('../models/booking');
+const Booking = require('../models/booking');
 
 const bookingData = [
   {

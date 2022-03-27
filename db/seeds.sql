@@ -44,7 +44,7 @@ VALUES
     ('2022-03-30 14:00:00', "Grooming", sysdate(), sysdate()),
     ('2022-03-30 14:00:00', "Obedience Training Level 1", sysdate(), sysdate()),
     ('2022-04-01 14:00:00', "Obedience Training Level 2", sysdate(), sysdate()),
-    ('2022-04-01 10:00:00', "Obedience Training Begginer", sysdate(), sysdate()),
+    ('2022-04-01 10:00:00', "Obedience Training Begginer", sysdate(), sysdate()),npm run session_datetime
     ('2022-04-01 14:00:00', "Grooming", sysdate(), sysdate());
    
 

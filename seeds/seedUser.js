@@ -1,4 +1,4 @@
-const { User } = require('../models/user');
+const User = require('../models/user');
 
 const userData = [
   {
@@ -7,7 +7,7 @@ const userData = [
     phone_number: '0491-570-006',
     address: '67 Glen William Road, Jaggan',
     email: 'john@msn.com',
-    password: '$10$7D0ebLWLtsaBcmZnAzFQs.ImQ5flFicKCwGSoszG2sCP4ixnFwLXq',
+    password: '$10$7D0ebLWLtsaBcmZnAzFQs.ImQ5flFicKCwGSoszG2sCP4ixnFwLXq'
   },
   {
     first_name: 'James',
@@ -15,7 +15,7 @@ const userData = [
     phone_number: '0456-789-045',
     address: '8 Begley Street, Boogan',
     email: 'Jmes@live.com',
-    password: 'eHekPc3UTIBgWc5',
+    password: 'eHekPc3UTIBgWc5'
   },
   {
     first_name: 'Robert',
@@ -23,7 +23,7 @@ const userData = [
     phone_number: '0491-570-156',
     address: '645 Isaac Road, Welshpool',
     email: 'kddailey@msn.com',
-    password: 'jwNyQDGRS4OeMMP',
+    password: 'jwNyQDGRS4OeMMP'
   },
   {
     first_name: 'Momoko',
@@ -31,7 +31,7 @@ const userData = [
     phone_number: '0491-570-157',
     address: '36 Frouds Road, Tarin Rock',
     email: 'Mom@icloud.com',
-    password: '37cdaiZCVRxaTjq',
+    password: '37cdaiZCVRxaTjq'
   },
   {
     first_name: 'Juan',
@@ -39,7 +39,7 @@ const userData = [
     phone_number: '0491-570-158',
     address: '917 Balonne Street, Orton Park',
     email: 'mbsn@gmail.com',
-    password: 'b2dadaByZhP4BFz',
+    password: 'b2dadaByZhP4BFz'
   },
   {
     first_name: 'Jennifer',
@@ -47,7 +47,7 @@ const userData = [
     phone_number: '0491-570-160',
     address: '43 Garden Place Road, Buckrabanyule',
     email: 'Jenni@optonline.net',
-    password: 'gMtDxbBJxAgVhce',
+    password: 'gMtDxbBJxAgVhce'
   },
   {
     first_name: 'George',
@@ -55,7 +55,7 @@ const userData = [
     phone_number: '0491-570-161',
     address: '764 Roseda Road, Splinter Creek',
     email: 'George@live.com',
-    password: 'vuoLfpFrHcwDUIm',
+    password: 'vuoLfpFrHcwDUIm'
   },
   {
     first_name: 'Michael ',
@@ -63,7 +63,7 @@ const userData = [
     phone_number: '0491-570-162',
     address: '92 Noalimba Avenue, Rollingstone',
     email: 'Michael@yahoo.ca',
-    password: 'RDmnaFblxhXyH7M',
+    password: 'RDmnaFblxhXyH7M'
   },
   {
     first_name: 'Kishan ',
@@ -71,7 +71,7 @@ const userData = [
     phone_number: '0491-570-163',
     address: '14 Ocean Parade, Warwick Dc',
     email: 'Kishan@comcast.net',
-    password: 'j3bQv1csgp1oApK',
+    password: 'j3bQv1csgp1oApK'
   },
   {
     first_name: 'Mayra',
@@ -79,7 +79,7 @@ const userData = [
     phone_number: '0491-570-164',
     address: '26 Hodgson St, Bendemeer',
     email: 'Mayra@live.com',
-    password: 'YXLFFDPS41usZ1S',
+    password: 'YXLFFDPS41usZ1S'
   },
   {
     first_name: 'Luca',
@@ -87,7 +87,7 @@ const userData = [
     phone_number: '0491-570-165',
     address: '95 Norton Street, Kadina',
     email: 'luca@msn.com',
-    password: 'm0goiNUwtVLs5dr',
+    password: 'm0goiNUwtVLs5dr'
   },
   {
     first_name: 'Luca',
@@ -95,7 +95,7 @@ const userData = [
     phone_number: '0491-570-165',
     address: '95 Norton Street, Kadina',
     email: 'luca@msn.com',
-    password: 'm0goiNUwtVLs5dr',
+    password: 'm0goiNUwtVLs5dr'
   },
   {
     first_name: 'Oliver',
@@ -103,7 +103,7 @@ const userData = [
     phone_number: '0491-570-166',
     address: '82 Farnell Street, Gosnells',
     email: 'Oli@icloud.com',
-    password: 'uQ9lU6nSUNG6Wsu',
+    password: 'uQ9lU6nSUNG6Wsu'
   },
 
 ];

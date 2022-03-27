@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Activity, Dog, User, Booking, Message, } = require('../models');
+const sequelize = require('../config/connection');
 const withAuth = require('../utils/auth');
 
 // signup endpoint

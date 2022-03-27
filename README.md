@@ -3,7 +3,7 @@ Project that utilises skills to create a RESTful API
 
 # About project
 
-create a real-world full-stack application that you'll be able to showcase to potential employers. The directions and technologies used in creating this project
+Create a real-world full-stack application that you'll be able to showcase to potential employers. The directions and technologies used in creating this project:
 
 1. Use of Node.js and Express.js to create a  RESTful API.
 
@@ -50,4 +50,4 @@ Kishan Gosrani - https://github.com/kishan254
 
 # Additions
 
-We are always looking for ways to make pur code better. If you would like to collaborate and make this app better, please feel free to do so by cloning and pulling the latests files.
+We are always looking for ways to make our code better. If you would like to collaborate and make this app better, please feel free to do so by cloning and pulling the latests files.

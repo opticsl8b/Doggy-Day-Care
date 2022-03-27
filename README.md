@@ -15,23 +15,23 @@
 
 # About project
 
-Create a real-world full-stack application that you'll be able to showcase to potential employers. The directions and technologies used in creating this project
+Create a real-world full-stack application that you'll be able to showcase to potential employers. The directions and technologies used in creating this project are;
 
 1. Use of Node.js and Express.js to create a  RESTful API.
 
-2. Use Handlebars.js as the template engine
+2. Use of Handlebars.js as the template engine
 
-3. Use MySQL and the Sequelize ORM for the database
+3. Use of MySQL and the Sequelize ORM for the database
 
-4. Have both GET and POST routes for retrieving and adding new data
+4. Utilising GET and POST routes for retrieving and adding new data
 
 5. Deployed using Heroku (with data).
 
-The project was creating with an intention to make responsive web app that our client could use in their Dog Day Care business.
+The project was created with an intention to make a responsive web application, that our client could use in their Dog Day Care business.
 
-The project needed to have options for users to login and sign up, they needed to be a method of booking appointments online and also managing their dog profile and their appointments. The client also wanted an easy "contact us" method, where user can write something and immediately gets sent to the admin.
+The project needed to have options for users to login and sign up, booking appointments online, managing dog profiles and their already existing appointments. The client also wanted an easy "contact us" method, where user can write something and immediately gets sent to the admin.
 
-Below are some photos of planning phase and the the screenshots of how the layout of the app looks like.
+Below are some photos of the planning phase and the the screenshots of how the layout of the app looks like.
 
 # Technologies Used 
 
@@ -65,7 +65,7 @@ ERD - How the IDs would work
 
 ![two](assets/ERD.png)
 
-# Screenshot of work
+# Screenshots of Applications
 
 ![three](assets/homepage.png)
 ![four](assets/dashboard_one.png)
@@ -92,5 +92,5 @@ This project uses the MIT license.
 
 # Additions
 
-We are always looking for ways to make our code better. If you would like to collaborate and make this app better, please feel free to do so by cloning and pulling the latests files.
+We are always looking for ways to make our code better. If you would like to collaborate and make this application better, please feel free to do so by cloning and pulling the latest files.
 

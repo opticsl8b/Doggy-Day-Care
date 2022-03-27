@@ -15,21 +15,28 @@ router.get('/', (req, res) => {
 
 //  Add user with login scenario
 
-router.post('/', (req, res) => {
-  User.create({
-    email: req.body.email,
-    first_name: req.body.firstName,
-    last_name: req.body.lastName,
-    phone_number: req.body.phoneNumber,
-    address: req.body.address,
-    password: req.body.password,
-  }).then((createData) => {
-    // create session before send the response back and express will save it via .save() method by default
-    req.session.user_id = createData.id;
-    req.session.username = createData.username;
-    req.session.loggedIn = true;
-    res.json(createData);
-  });
+router.post('/', async (req, res) => {
+
+  try {
+    const dbUserData = await User.create({
+      email: req.body.email,
+      first_name: req.body.firstName,
+      last_name: req.body.lastName,
+      phone_number: req.body.phoneNumber,
+      address: req.body.address,
+      password: req.body.password,
+    });
+
+      req.session.save(() => {
+      req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
+
+      res.status(200).json(dbUserData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.post('/login', (req, res) => {
@@ -52,7 +59,7 @@ router.post('/login', (req, res) => {
     req.session.username = loginData.username;
     req.session.loggedIn = true;
 
-    res.json({ user: loginData, message: 'Loggin successfully' });
+    res.json({ user: loginData, message: 'Login successful' });
   });
 });
 

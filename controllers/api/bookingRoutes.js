@@ -60,6 +60,7 @@ router.post('/', async (req, res) => {
     dog_id: req.body.dog,
     user_id: req.session.user_id,
   });
+   res.status(200).json(bookingData);;
     // DONT uncomment this yet dont want to flood emails
    //sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);
    }catch(err) {

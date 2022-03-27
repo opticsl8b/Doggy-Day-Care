@@ -1,16 +1,36 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* Variables CSS */
+:root{
+  --hue-color: 230;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: rgb(235, 235, 235);
+}
+
 h1 {
   color: rgb(235, 235, 235);
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
 
 h2 {
   text-align: center;
   margin-bottom: 5%;
+  color: rgb(235, 235, 235);
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
 }
 
 h3 {
   margin-top: -5%;
   text-align: center;
   margin-bottom: 10%;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
 }
 
 a {
@@ -25,26 +45,33 @@ a:hover {
   color: rgb(255, 255, 255);
 }
 
+.navbar-light{
+  background-color: hsl(var(--hue-color),69%,61%);
+}
+
 .navbar-text {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
+  margin-bottom: 8px;
 }
 
-body {
-  background-color: rgb(255, 255, 255);
-}
+
 
 .dog-pic {
   position: fixed;
   bottom: 0px;
-  height: 45%;
-  width: 20%;
+  height: 50%;
+  width: 30%;
   z-index: -1;
 }
 
 .pic-right {
   right: 0px;
+}
+
+.pic-left {
+  left: 0px;
 }
 
 .inputBox {
@@ -59,23 +86,30 @@ body {
   text-align: center;
 }
 
-.pic-left {
-  left: 0px;
-}
+
 
 .container-xl {
   width: 100%;
+}
+
+.hide {
+  display: none;
 }
 
 .navbarButton {
   color: whitesmoke;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(1, 1, 5);
   border-radius: 10%;
   margin-bottom: 0.5%;
   padding: 0.5%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+.navbarButton:hover,
+.loginButton:hover
+{
+background-color: hsl(var(--hue-color),40%,32%);
 }
 
 .view-card {
@@ -88,15 +122,16 @@ body {
 
 .login-card {
   margin-top: 2%;
-  background-color: rgb(202, 202, 202);
+  background-color: hsl(var(--hue-color),69%,61%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10%;
   padding: 2%;
+  padding-bottom: 0;
 }
 
 .signup-card {
   margin-top: 2%;
-  background-color: rgb(202, 202, 202);
+  background-color: hsl(var(--hue-color),92%,85%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5%;
   padding: 1%;
@@ -128,25 +163,30 @@ textarea {
   color: whitesmoke;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(1, 1, 5);
+  margin-top: 12px;
+  background-color: hsl(var(--hue-color),69%,61%);
   border-radius: 10%;
   margin-bottom: 0.5%;
   padding: 5%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width:35%;
 }
+
+
 
 .homeButton {
   color: whitesmoke;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(1, 1, 5);
-  border-radius: 1%;
+  background-color: hsl(var(--hue-color),69%,61%);;
+  border-radius: 8px;
   margin-bottom: 0.5%;
   padding: 5%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-decoration: none;
   margin-bottom: 5%;
+
 }
 
 .addDogButton {
@@ -164,6 +204,12 @@ textarea {
 .btn-primary {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Icon */
+
+.uil{
+  font-size:x-large;
 }
 
 @media screen and (max-width: 1400px) {

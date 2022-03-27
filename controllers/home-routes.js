@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Activity, Dog, User, Booking, Message, Activity } = require('../models');
+const { Activity, Dog, User, Booking, Message, } = require('../models');
 const withAuth = require('../utils/auth');
 
 // signup endpoint
@@ -24,6 +24,10 @@ router.get("/login", (req, res) => {
 
 // Gets Landing Page
 router.get('/', async (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/home");
+    return;
+  }
  try {
     res.render('lander') //RENDERS LANDER WITH MAIN
   } catch (err) {

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Activity, Dog, User, Booking, Message, Activity } = require('../models');
+const { Activity, Dog, User, Booking, Message } = require('../models');
 const withAuth = require('../utils/auth');
 
 // signup endpoint

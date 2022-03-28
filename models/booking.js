@@ -2,7 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const User = require('./User');
 
-class Booking extends Model {}
+class Booking extends Model {
+  getId() {
+    return this.id;
+  }
+}
 
 Booking.init(
   {

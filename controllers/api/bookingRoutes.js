@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Booking, User, Dog } = require('../../models');
+const { Booking, User, Dog, Activity } = require('../../models');
+
 const nodemailer = require('nodemailer');
 
 async function sendEmail(recipient, title, message) {
@@ -52,15 +53,29 @@ router.post('/', async (req, res) => {
   try {
     const user = await User.findByPk(req.session.user_id);
     const dog = await Dog.findByPk(req.body.dog);
-    const bookingData = await Booking.create({
-      session_datetime: req.body.daysession,
-      session_name: req.body.service,
+
+    const bookingData = await Booking.create(
+      {
+        session_datetime: req.body.daysession,
+        session_name: req.body.service,
+        // dog_id: req.body.dog,
+        user_id: req.session.user_id,
+        // dogs: [dog],
+      }
+      // {
+      //   include: Dog,
+      //   through: Activity,
+      // }
+    );
+    const activity = await Activity.create({
       dog_id: req.body.dog,
-      user_id: req.session.user_id,
+      booking_id: bookingData.getId(),
     });
+
     res.status(200).json(bookingData);
     // DONT uncomment this yet dont want to flood emails
-    // sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);
+    //sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -84,6 +99,7 @@ router.delete('/:id',  async (req, res) => {
   console.log(err);
 }
 });
+
 
 
 module.exports = router;

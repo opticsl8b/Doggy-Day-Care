@@ -19,7 +19,6 @@ background-color: hsl(var(--hue-color),40%,32%); */
 /* Cards */
 /* background-color: hsl(var(--hue-color),92%,85%); */
 
-
 /* Variables CSS */
 :root {
   --hue-color: 230;
@@ -43,7 +42,7 @@ h2 {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.dog-name{
+.dog-name {
   color: rgb(235, 235, 235);
   margin-bottom: 7%;
 }
@@ -59,7 +58,7 @@ h4 {
   margin-top: -5%;
   text-align: center;
   margin-bottom: 10%;
-  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -134,13 +133,12 @@ a:hover {
 .navbarButton:hover,
 .loginButton:hover,
 .homeButton:hover,
-.managedog-card:hover
-{
-background-color: hsl(var(--hue-color),40%,32%);
-
+.managedog-card:hover,
+.landerBtn:hover {
+  background-color: hsl(var(--hue-color), 40%, 32%);
 }
 
-#deleteBtn{
+#deleteBtn {
   margin-bottom: 1%;
 }
 
@@ -155,15 +153,15 @@ background-color: hsl(var(--hue-color),40%,32%);
 
 .signup-card {
   margin-top: 2%;
-  background-color: hsl(var(--hue-color),69%,61%);
+  background-color: hsl(var(--hue-color), 69%, 61%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 8px;
   padding: 1%;
   width: 30%;
 }
 
-.home-card{
-  background-color: hsl(var(--hue-color),69%,61%);
+.home-card {
+  background-color: hsl(var(--hue-color), 69%, 61%);
 }
 
 .addDogCard {
@@ -175,10 +173,9 @@ background-color: hsl(var(--hue-color),40%,32%);
   width: 10%;
 }
 
-.dog-tag{
+.dog-tag {
   margin-bottom: auto;
 }
-
 
 .form-input {
   width: 100%;
@@ -202,20 +199,29 @@ textarea {
   margin-bottom: 0.5%;
   padding: 5%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width:auto;
+  width: auto;
 }
 
-.landerBtn{
-padding: 2%;
+.landerBtn {
+  color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  background-color: hsl(var(--hue-color), 69%, 61%);
+  border-radius: 10%;
+  margin-bottom: 0.5%;
+  padding: 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: auto;
+  padding: 2%;
 }
-
 
 .homeButton {
   color: whitesmoke;
   width: auto;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: hsl(var(--hue-color),55%,46%);
+  background-color: hsl(var(--hue-color), 55%, 46%);
   border-radius: 8px;
   margin-bottom: 0.5%;
   padding: 5%;
@@ -223,15 +229,13 @@ padding: 2%;
   text-decoration: none;
   margin-bottom: 5%;
   font-size: large;
-  
 }
 
-.addDogButton{
+.addDogButton {
   margin-top: 2.5%;
-  padding:2% 5%;
+  padding: 2% 5%;
   margin-bottom: 2.5%;
 }
-
 
 .btn-primary {
   margin-left: auto;
@@ -244,7 +248,7 @@ padding: 2%;
   font-size: x-large;
 }
 
-.uil-trash-alt{
+.uil-trash-alt {
   margin-right: 2px;
 }
 

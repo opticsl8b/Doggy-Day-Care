@@ -2,6 +2,7 @@
 {{#each booking.dogs as |dog|}}     
           
     <div class="d-flex flex-column align-items-center">
+
     <section class="view-card">
          <option class="hide" id="bookId" value={{booking.id}}>{{booking.id}}</option>
         <h2>{{dog.dog_name}}</h2>
@@ -9,11 +10,12 @@
         <h3>{{format_date booking.session_datetime}}</h3>       
       
     </section>    
+
     </div>
 
 {{/each}}
 {{/each}}
-
+<script src="/js/delete-booking.js"></script>
 
 
  

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Booking, User, Dog, Activity } = require('../../models');
+
 const nodemailer = require('nodemailer');
 
 async function sendEmail(recipient, title, message) {
@@ -52,6 +53,7 @@ router.post('/', async (req, res) => {
   try {
     const user = await User.findByPk(req.session.user_id);
     const dog = await Dog.findByPk(req.body.dog);
+
     const bookingData = await Booking.create(
       {
         session_datetime: req.body.daysession,
@@ -73,10 +75,31 @@ router.post('/', async (req, res) => {
     res.status(200).json(bookingData);
     // DONT uncomment this yet dont want to flood emails
     //sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+//Delete a Dog
+router.delete('/:id',  async (req, res) => {
+  
+  try {
+  
+  const bookingData = await Booking.destroy(
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+  res.status(200).json(bookingData);
+} catch (err) {
+  console.log(err);
+}
+});
+
+
 
 module.exports = router;

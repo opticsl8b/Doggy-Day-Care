@@ -67,14 +67,14 @@ ERD - How the IDs would work
 
 # Screenshots of Applications
 
-![three](assets/homepage.png)
-![four](assets/dashboard_one.png)
-![five](assets/add_dog.png)
-![six](assets/book_service.png)
+![three](assets/heroku_one.png)
+![four](assets/heroku_two.png)
+![five](assets/heroku_three.png)
+
 
 # Application URL
 
-[URL](ADD HEROKU LINK HERE)
+[URL to Heroku](https://doggy-day-care-gula.herokuapp.com/)
 
 # Team
 

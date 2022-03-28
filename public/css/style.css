@@ -2,9 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-
 /* Variables CSS */
-:root{
+:root {
   --hue-color: 230;
 }
 
@@ -16,21 +15,21 @@ body {
 
 h1 {
   color: rgb(235, 235, 235);
-  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
   text-align: center;
   margin-bottom: 5%;
   color: rgb(235, 235, 235);
-  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
   margin-top: -5%;
   text-align: center;
   margin-bottom: 10%;
-  text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 h4 {
@@ -54,8 +53,8 @@ a:hover {
   color: rgb(255, 255, 255);
 }
 
-.navbar-light{
-  background-color: hsl(var(--hue-color),69%,61%);
+.navbar-light {
+  background-color: hsl(var(--hue-color), 69%, 61%);
 }
 
 .navbar-text {
@@ -64,8 +63,6 @@ a:hover {
   margin-top: 0px;
   margin-bottom: 8px;
 }
-
-
 
 .dog-pic {
   position: fixed;
@@ -95,8 +92,6 @@ a:hover {
   text-align: center;
 }
 
-
-
 .container-xl {
   width: 100%;
 }
@@ -122,13 +117,14 @@ a:hover {
 .managedog-card:hover
 {
 background-color: hsl(var(--hue-color),40%,32%);
+
 }
 
 
 
 .login-card {
   margin-top: 2%;
-  background-color: hsl(var(--hue-color),69%,61%);
+  background-color: hsl(var(--hue-color), 69%, 61%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10%;
   padding: 2%;
@@ -186,7 +182,7 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-top: 12px;
-  background-color: hsl(var(--hue-color),69%,61%);
+  background-color: hsl(var(--hue-color), 69%, 61%);
   border-radius: 10%;
   margin-bottom: 0.5%;
   padding: 5%;
@@ -219,7 +215,6 @@ padding: 2%;
   margin-top: 2.5%;
   padding:2% 5%;
   margin-bottom: 2.5%;
-
 }
 
 /* #addBtn{
@@ -246,8 +241,8 @@ padding-bottom: 2%;
 
 /* Icon */
 
-.uil{
-  font-size:x-large;
+.uil {
+  font-size: x-large;
 }
 
 @media screen and (max-width: 1400px) {

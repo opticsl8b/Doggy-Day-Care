@@ -1,7 +1,7 @@
 async function newDogHandler(event) {
   event.preventDefault();
   console.log('AddDog');
-  // string input TBD
+  
   const name = document.querySelector('#dog-name').value.trim();
   const gender = document.querySelector('#dog-gender').value.trim();
   const age = document.querySelector('#dog-age').value.trim();
@@ -27,6 +27,7 @@ async function newDogHandler(event) {
     if (response.ok) {
       // back to manage my dog page
       document.location.replace('/manage');
+      alert(`${name} has been added`);
     } else alert(response.status);
   } else if (!name) {
     alert("Please Tell us Your Dog's Name");

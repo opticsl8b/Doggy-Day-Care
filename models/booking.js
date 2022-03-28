@@ -1,8 +1,13 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Dog = require('./Dog');
+const Dog = require('./dog');
+const User = require('./user');
 
-class Booking extends Model {}
+class Booking extends Model {
+  getId() {
+    return this.id;
+  }
+}
 
 Booking.init(
   {
@@ -14,31 +19,29 @@ Booking.init(
     },
 
     session_datetime: {
-        type: DataTypes.DATE, 
-        allowNull: false,
+      type: DataTypes.DATE,
+      allowNull: false,
     },
-   
+
     session_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
-    dog_id: {
+
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: Dog,
+        model: User,
         key: 'id',
       },
     },
   },
   {
     sequelize,
-    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: "booking",
+    modelName: 'booking',
   }
-
 );
 
 module.exports = Booking;

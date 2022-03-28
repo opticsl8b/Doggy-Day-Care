@@ -1,11 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const { Dog, Booking } = require('../models');
+const Dog = require('./dog');
+const Booking = require('./booking');
 
 class Activity extends Model {}
 
 Activity.init(
-   {
+  {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -27,18 +28,16 @@ Activity.init(
         model: Booking,
         key: 'id',
       },
-    }
- 
-   },   
+    },
+  },
 
-{
+  {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'activity',
-}
-
+  }
 );
 
 module.exports = Activity;

@@ -1,9 +1,14 @@
 async function newMessageHandler(event) {
     event.preventDefault();
 
+    
+
   // string input TBD
-    const title = document.querySelector('#title').value;
-    const content = document.querySelector('#content').value;
+    const title = document.querySelector('.title').value.trim();
+    const content = document.querySelector('.content').value.trim();
+
+    console.log(title);
+    console.log(content);
   // string input TBD
     const response = await fetch("/api/messages", {
       method: "POST",
@@ -24,5 +29,5 @@ async function newMessageHandler(event) {
   // string input TBD
   document
     .querySelector(".loginButton")
-    .addEventListener("submit", newMessageHandler);
+    .addEventListener('click', newMessageHandler);
   

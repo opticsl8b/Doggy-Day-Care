@@ -1,8 +1,8 @@
-const User = require('./User');
-const Dog = require('./Dog');
-const Activity = require('./Activity');
-const Booking = require('./Booking');
-const Message = require('./Message');
+const User = require('./user');
+const Dog = require('./dog');
+const Activity = require('./activity');
+const Booking = require('./booking');
+const Message = require('./message');
 
 User.hasMany(Dog, {
   foreignKey: 'user_id',
@@ -27,4 +27,13 @@ User.hasMany(Message, {
 //Links message to user via User Model//
 Message.belongsTo(User, { foreignKey: 'user_id' });
 
-module.exports = { User, Dog, Activity, Booking };
+User.hasMany(Booking, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
+});
+
+Booking.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+module.exports = { User, Dog, Activity, Booking, Message };

@@ -1,5 +1,5 @@
 async function handleLogout() {
-  console.log('luca');
+  
     const response = await fetch("/api/users/logout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -29,4 +29,5 @@ async function handleLogout() {
   checkIfSessionIsActive();
   
   document.querySelector("#logout").addEventListener("click", handleLogout);
+  document.querySelector("#logout2").addEventListener("click", handleLogout);
   

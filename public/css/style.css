@@ -43,6 +43,11 @@ h2 {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
+.dog-name{
+  color: rgb(235, 235, 235);
+  margin-bottom: 7%;
+}
+
 h3 {
   margin-top: -5%;
   text-align: center;

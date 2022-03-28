@@ -1,5 +1,6 @@
+<div class="booking-container">
 {{#each bookingData as |booking|}}
-  {{#each booking.dogs as |dog|}}
+    {{#each booking.dogs as |dog|}}
 
     <div class='d-flex flex-column align-items-center'>
       <div class='signup-card'>
@@ -9,7 +10,7 @@
             id='bookId'
             value={{booking.id}}
           >{{booking.id}}</option>
-          <h2>{{dog.dog_name}}</h2>
+          <h2 class="dog-name">{{dog.dog_name}}</h2>
           <h3>Session: {{booking.session_name}}</h3>
           <h3>{{format_date booking.session_datetime}}</h3>
 
@@ -27,4 +28,5 @@
     </div>
   {{/each}}
 {{/each}}
+  </div>
 <script src='/js/delete-booking.js'></script>

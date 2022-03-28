@@ -76,6 +76,7 @@ ERD - How the IDs would work
 
 [URL to Heroku](https://doggy-day-care-gula.herokuapp.com/)
 
+
 # Team
 
 [George Cheng](https://github.com/opticsl8b)

@@ -141,4 +141,13 @@ router.get('/addDog', async (req, res) => {
   }
 });
 
+router.get('*', (req, res) => {
+  // check  session and redirect to the homepage if exists
+  if (req.session.loggedIn) {
+    res.redirect('/home');
+    return;
+  }
+  res.render('login');
+});
+
 module.exports = router;

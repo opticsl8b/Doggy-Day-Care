@@ -24,14 +24,6 @@ Booking.init(
       allowNull: false,
     },
 
-    dog_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: Dog,
-        key: 'id',
-      },
-    },
-
     user_id: {
       type: DataTypes.INTEGER,
       references: {

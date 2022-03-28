@@ -104,8 +104,9 @@ router.get('/home', withAuth, async (req, res) => {
 
 
  router.get('/contact', async (req, res) => {
+  
   try {
-     res.render('contact') //RENDERS CONTACT WITH MAIN
+     res.render('contact', { loggedIn: req.session.loggedIn }) //RENDERS CONTACT WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);
@@ -141,7 +142,7 @@ router.get('/home', withAuth, async (req, res) => {
 
 router.get('/addDog', async (req, res) => {
   try {
-     res.render('addDog') //RENDERS ADD DOG WITH MAIN
+     res.render('addDog', { loggedIn: req.session.loggedIn }) //RENDERS ADD DOG WITH MAIN
    } catch (err) {
      console.log(err);
      res.status(500).json(err);

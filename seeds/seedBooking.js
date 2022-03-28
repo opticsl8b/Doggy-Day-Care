@@ -19,6 +19,18 @@ const bookingData = [
     created_at: '10-03-2022',
     updated_at: '15-03-2022',
   },
+  // {
+  //   session_datetime: '022-03-25 14:00:00',
+  //   name: 'Obedience Training Level 1',
+  //   created_at: sysdate(TIME),
+  //   updated_at: sysdate(TIME),
+  // },
+  // {
+  //   session_datetime: '2022-03-25 11:00:00',
+  //   name: 'Grooming',
+  //   created_at: sysdate(TIME),
+  //   updated_at: sysdate(TIME),
+  // },
 ];
 
 const seedBooking = () => Booking.bulkCreate(bookingData);

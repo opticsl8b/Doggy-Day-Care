@@ -5,7 +5,6 @@ const seedUser = require('./seedUser');
 const seedActivity = require('./seedActivity');
 const seedMessage = require('./seedMessage');
 
-
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   

@@ -243,6 +243,10 @@ padding: 2%;
   font-size:x-large;
 }
 
+.uil-trash-alt{
+  margin-right: 2px;
+}
+
 @media screen and (max-width: 1400px) {
   .dog-pic {
     height: 55%;

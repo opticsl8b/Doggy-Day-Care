@@ -1,4 +1,4 @@
-const { Activity } = require('../models/dog');
+const { Activity } = require('../models');
 
 const activityData = [
   {

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Dog = require('./Dog');
-const User = require('./User');
+const Dog = require('./dog');
+const User = require('./user');
 
 class Booking extends Model {}
 
@@ -15,15 +15,15 @@ Booking.init(
     },
 
     session_datetime: {
-        type: DataTypes.DATE, 
-        allowNull: false,
+      type: DataTypes.DATE,
+      allowNull: false,
     },
-   
+
     session_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
+
     dog_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -42,12 +42,10 @@ Booking.init(
   },
   {
     sequelize,
-    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: "booking",
+    modelName: 'booking',
   }
-
 );
 
 module.exports = Booking;

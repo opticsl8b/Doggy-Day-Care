@@ -1,4 +1,4 @@
-const Dog  = require('../models/dog');
+const Dog = require('../models');
 
 const dogData = [
   {

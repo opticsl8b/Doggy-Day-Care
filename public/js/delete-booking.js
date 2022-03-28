@@ -1,4 +1,4 @@
-const deleteBtn = document.querySelector('#deleteBtn');
+const deleteBtn = document.getElementById('deleteBtn');
 
 async function newBookingHandler(event) {
   event.preventDefault();
@@ -7,7 +7,7 @@ async function newBookingHandler(event) {
   // const url = document.location.pathname;
   const id = deleteBtn.dataset.bookingId;
 
-  if (confirm('Are you sure you want to delete this post?')) {
+  if (confirm('Are you sure you want to delete this Booking?')) {
     const response = await fetch(`/api/booking/${id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },

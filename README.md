@@ -74,7 +74,7 @@ ERD - How the IDs would work
 
 # Application URL
 
-[URL](ADD HEROKU LINK HERE)
+[URL](https://doggy-day-care-gula.herokuapp.com/)
 
 # Team
 

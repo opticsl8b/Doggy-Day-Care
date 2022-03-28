@@ -2,29 +2,29 @@
   {{#each booking.dogs as |dog|}}
 
     <div class='d-flex flex-column align-items-center'>
+      <div class='signup-card'>
+        <section class='view-card'>
+          <option
+            class='hide'
+            id='bookId'
+            value={{booking.id}}
+          >{{booking.id}}</option>
+          <h2>{{dog.dog_name}}</h2>
+          <h3>Session: {{booking.session_name}}</h3>
+          <h3>{{format_date booking.session_datetime}}</h3>
 
-      <section class='view-card'>
-        <option
-          class='hide'
-          id='bookId'
-          value={{booking.id}}
-        >{{booking.id}}</option>
-        <h2>{{dog.dog_name}}</h2>
-        <h3>Session: {{booking.session_name}}</h3>
-        <h3>{{format_date booking.session_datetime}}</h3>
-
-      </section>
-      <div class='d-flex justify-content-center align-items-center'>
-        <button
-          data-booking-id='{{booking.id}}'
-          id='deleteBtn'
-          class='homeButton'
-        >
-          <i class='uil uil-trash-alt'></i>Cancel Booking
-        </button>
+        </section>
+        <div class='d-flex justify-content-center align-items-center'>
+          <button
+            data-booking-id='{{booking.id}}'
+            id='deleteBtn'
+            class='homeButton'
+          >
+            <i class='uil uil-trash-alt'></i>Cancel Booking
+          </button>
+        </div>
       </div>
     </div>
-
   {{/each}}
 {{/each}}
 <script src='/js/delete-booking.js'></script>

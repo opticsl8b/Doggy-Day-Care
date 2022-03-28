@@ -12,38 +12,38 @@ const messageData = [
     user_id: 1,
   },
 
-  {
-    title: 'Booking cancellation',
-    message_content: 'Hi, I just wanted to let you know that unfortunately, I am not going to be able to...',
+  // {
+  //   title: 'Booking cancellation',
+  //   message_content: 'Hi, I just wanted to let you know that unfortunately, I am not going to be able to...',
   //   created_at: sysdate(TIME),
   //   updated_at: sysdate(TIME),
-    user_id: 2,
-  },
+  //   user_id: User,
+  // },
 
-  {
-    title: 'Checking availability for accommodation',
-    message_content: 'Hi, we are planning to go on a holiday to Bali ...',
+  // {
+  //   title: 'Checking availability for accommodation',
+  //   message_content: 'Hi, we are planning to go on a holiday to Bali ...',
   //   created_at: sysdate(TIME),
   //   updated_at: sysdate(TIME),
-    user_id: 3,
-  },
+  //   user_id: User,
+  // },
 
-  {
-    title: 'Obedience training',
-    message_content:
-      'Hi, I just wondering when does the period for enrolment starts? ...',
+  // {
+  //   title: 'Obedience training',
+  //   message_content:
+  //     'Hi, I just wondering when does the period for enrolment starts? ...',
   //   created_at: sysdate(TIME),
   //   updated_at: sysdate(TIME),
-    user_id: 4,
-  },
+  //   user_id: User,
+  // },
 
-  {
-    title: 'Feedback',
-    message_content: 'Hi, I would like to thank...',
+  // {
+  //   title: 'Feedback',
+  //   message_content: 'Hi, I would like to thank...',
   //   created_at: sysdate(TIME),
   //   updated_at: sysdate(TIME),
-    user_id: 5,
-  },
+  //   user_id: User,
+  // },
 ];
 
 const seedMessage = () => Message.bulkCreate(messageData);

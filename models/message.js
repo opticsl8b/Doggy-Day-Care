@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const User = require('./user');
+const User = require('./User');
 
 class Message extends Model {}
 

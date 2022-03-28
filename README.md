@@ -15,7 +15,7 @@
 
 # About project
 
-Create a real-world full-stack application that you'll be able to showcase to potential employers. The directions and technologies used in creating this project:
+Create a real-world full-stack application that you'll be able to showcase to potential employers. The directions and technologies used in creating this project are;
 
 1. Use of Node.js and Express.js to create a  RESTful API.
 
@@ -92,4 +92,5 @@ This project uses the MIT license.
 
 # Additions
 
-We are always looking for ways to make our code better. If you would like to collaborate and make this app better, please feel free to do so by cloning and pulling the latests files.
+We are always looking for ways to make our code better. If you would like to collaborate and make this application better, please feel free to do so by cloning and pulling the latest files.
+

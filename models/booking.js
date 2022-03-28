@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Dog = require('./dog');
-const User = require('./user');
+const User = require('./User');
 
 class Booking extends Model {
   getId() {

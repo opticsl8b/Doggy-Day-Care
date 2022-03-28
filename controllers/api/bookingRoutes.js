@@ -1,43 +1,42 @@
 const router = require('express').Router();
 const { Booking, User, Dog } = require('../../models');
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
 
 async function sendEmail(recipient, title, message) {
-    return new Promise((resolve, reject) => {
-      var transporter = nodemailer.createTransport({
-        service: "Gmail",
-        port: 587,
-        secure: false,
-        auth: {
-          user: "dogwardbounddaycare@gmail.com",
-          pass: "Doggy829@@"
-        }
-      });
-  
-      var settings = {
-        from: '"The Team" <dogwardbounddaycare@gmail.com>',
-        to: recipient,
-        subject: title, 
-        html: message
+  return new Promise((resolve, reject) => {
+    var transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      port: 587,
+      secure: false,
+      auth: {
+        user: 'dogwardbounddaycare@gmail.com',
+        pass: 'Doggy829@@',
+      },
+    });
+
+    var settings = {
+      from: '"The Team" <dogwardbounddaycare@gmail.com>',
+      to: recipient,
+      subject: title,
+      html: message,
+    };
+    transporter.sendMail(settings, function (error, response) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log(response);
+        resolve(true);
       }
-      transporter.sendMail(settings, function (error, response) {
-        if (error) {
-          console.log(error);
-          reject(error);
-        } else {
-          console.log(response);
-          resolve(true);
-        }
-      });
-    });    
+    });
+  });
 }
 
 //TODO: Add this into booking post route where response = ok
 // DONT uncomment this yet dont want to flood emails
-// var message = `  
+// var message = `
 
 //     Hi there ${user.fname} ${user.lname} Your booking for ${user.dog.name} is confirmed with the following details
-
 
 //     ${booking.name}
 //     ${booking.day }
@@ -50,25 +49,41 @@ async function sendEmail(recipient, title, message) {
 // Create new booking
 
 router.post('/', async (req, res) => {
-
-  try {  
+  try {
     const user = await User.findByPk(req.session.user_id);
     const dog = await Dog.findByPk(req.body.dog);
     const bookingData = await Booking.create({
-    session_datetime: req.body.daysession,
-    session_name: req.body.service,
-    dog_id: req.body.dog,
-    user_id: req.session.user_id,
-  });
-   res.status(200).json(bookingData);;
+      session_datetime: req.body.daysession,
+      session_name: req.body.service,
+      dog_id: req.body.dog,
+      user_id: req.session.user_id,
+    });
+    res.status(200).json(bookingData);
     // DONT uncomment this yet dont want to flood emails
-   //sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);
-   }catch(err) {
+    // sendEmail (user.email, "Confirmation of your Doggy Daycare Appointment", message);
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
+//Delete a Dog
+router.delete('/:id',  async (req, res) => {
+  
+  try {
+  
+  const bookingData = await Booking.destroy(
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+  res.status(200).json(bookingData);
+} catch (err) {
+  console.log(err);
+}
+});
+
+
 module.exports = router;
-
-

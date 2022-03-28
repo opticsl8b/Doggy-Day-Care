@@ -57,8 +57,6 @@ h4 {
   text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
 }
 
-
-
 a {
   text-align: center;
   text-decoration: none;
@@ -93,7 +91,7 @@ a:hover {
 }
 
 .pic-right {
-  right: 4%;
+  right: 2%;
 }
 
 .pic-left {
@@ -130,7 +128,6 @@ a:hover {
   margin-bottom: 0.5%;
   padding: 0.5%;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
-  
 }
 
 .navbarButton:hover,
@@ -141,7 +138,9 @@ a:hover {
 background-color: hsl(var(--hue-color),40%,32%);
 }
 
-
+#deleteBtn{
+  margin-bottom: 1%;
+}
 
 .login-card {
   margin-top: 2%;

@@ -6,7 +6,6 @@ async function newBookHandler(event) {
     const dog = document.querySelector('#booking-dog').value;    
     const service = document.querySelector('#booking-service').value;
     const daysession = day + " " + session;
-
     
     //dog input here is the dogs ID not the dogs NAME
     if (daysession && dog && service){
@@ -22,8 +21,9 @@ async function newBookHandler(event) {
       },
     });
     if (response.ok) {
-      // string input TBD
+      
       document.location.replace('/appointments');
+      alert(`Thank You!Your booking is received successfully`);
     } else alert(response.status);
   }else if(!day){alert("You need to provide day")}
   else if(!session){alert("You need to provide session")}

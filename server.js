@@ -12,6 +12,7 @@ const models = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// session configuration
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -22,7 +23,7 @@ const sess = {
   }),
 };
 
-app.use(session(sess));
+app.use(session(sess)); // enabling session within express
 
 const hbs = exphbs.create({ helpers });
 

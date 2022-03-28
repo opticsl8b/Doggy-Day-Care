@@ -2,6 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* Theme Color */
+
+/* first-color */
+/* Login Card*/
+/* background-color: hsl(var(--hue-color),69%,61%); */
+
+/* first-color Darker:hover
+background-color: hsl(var(--hue-color),40%,32%); */
+
+/* first-color semi-Darker*/
+/* Buttons */
+/* background-color: hsl(var(--hue-color),55%,46%); */
+
+/* First Color Lighter */
+/* Cards */
+/* background-color: hsl(var(--hue-color),92%,85%); */
+
 
 /* Variables CSS */
 :root{
@@ -69,18 +86,18 @@ a:hover {
 
 .dog-pic {
   position: fixed;
-  bottom: 0px;
+  bottom: 4%;
   height: 50%;
   width: 30%;
   z-index: -1;
 }
 
 .pic-right {
-  right: 0px;
+  right: 4%;
 }
 
 .pic-left {
-  left: 0px;
+  left: 4%;
 }
 
 .inputBox {
@@ -157,17 +174,10 @@ background-color: hsl(var(--hue-color),40%,32%);
   width: 10%;
 }
 
-
-
 .dog-tag{
   margin-bottom: auto;
 }
 
-
-/* .managedog-card{
-  border-radius: 8px;
-  
-} */
 
 .form-input {
   width: 100%;
@@ -222,22 +232,6 @@ padding: 2%;
 
 }
 
-/* #addBtn{
-padding-top: 2% ;
-padding-bottom: 2%;
-} */
-
-/* .addDogButton {
-  color: rgb(255, 255, 255);
-  width: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(1, 1, 5);
-  border-radius: 5%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-size: x-large;
-  margin-top: 1%;
-} */
 
 .btn-primary {
   margin-left: auto;
@@ -252,8 +246,8 @@ padding-bottom: 2%;
 
 @media screen and (max-width: 1400px) {
   .dog-pic {
-    height: 45%;
-    width: 20%;
+    height: 55%;
+    width: 30%;
   }
 }
 
@@ -263,7 +257,7 @@ padding-bottom: 2%;
     width: 30%;
   }
   .signup-card {
-    width: 70%;
+    width: 55%;
   }
 }
 
@@ -273,7 +267,7 @@ padding-bottom: 2%;
     width: 40%;
   }
   .signup-card {
-    width: 80%;
+    width: 45%;
   }
 }
 

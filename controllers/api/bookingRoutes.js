@@ -10,8 +10,8 @@ async function sendEmail(recipient, title, message) {
       port: 587,
       secure: false,
       auth: {
-        user: 'dogwardbounddaycare@gmail.com',
-        pass: 'Doggy829@@',
+        user: Doggy_Email,
+        pass: Doggy_PW,
       },
     });
 
